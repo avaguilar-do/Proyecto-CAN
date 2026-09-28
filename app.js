@@ -368,26 +368,16 @@ partes.push(proximas.length
 fill("#vencimientos-resumen", partes);
 }
 
-function totalPosiciones(mesa) {
-return D.recursos.posiciones.filter((p) => !mesa || p.mesa === mesa).reduce((s, p) => s + p.n, 0);
-}
-
 function mesaCard(m) {
-const consultor = D.recursos.consultor.find((c) => c.mesa === m.id);
-const posiciones = totalPosiciones(m.id);
 return h("article", { class: "mesa", "data-mesa": m.id, "aria-labelledby": "mesa-" + m.id },
 h("header", { class: "mesa__head" },
 h("h4", { id: "mesa-" + m.id }, m.nombre),
 h("p", { class: "mesa__sub" }, m.subtitulo)),
 h("dl", { class: "mesa__facts" },
-m.lideres.map((l) => h("div", null, h("dt", null, l.rol), h("dd", null, l.nombre))),
-h("div", null, h("dt", null, "Sesiona"), h("dd", null, m.cadencia))),
+m.lideres.map((l) => h("div", null, h("dt", null, l.rol), h("dd", null, l.nombre)))),
 h("p", { class: "mesa__obj" }, m.objetivo),
 h("h5", null, "Entregables principales"),
 h("ul", { class: "mesa__list" }, m.entregables.map((e) => h("li", null, e))),
-h("div", { class: "mesa__foot" },
-h("span", { class: "mesa__pill" }, "Consultor externo: ", h("strong", null, consultor && consultor.requiere ? "Sí" : "No")),
-h("span", { class: "mesa__pill" }, "Posiciones solicitadas: ", h("strong", null, posiciones))),
 h("details", null,
 h("summary", null, "Integrantes (" + m.integrantes.length + ") y áreas"),
 h("p", null, m.integrantes.join(", ") + "."),
@@ -395,16 +385,10 @@ h("p", null, "Áreas: " + m.areas.join(", ") + ".")));
 }
 
 function renderEstructura() {
-const g = D.gobierno;
-const principales = ["Project Manager", "Product Owner", "Arquitecto", "Arquitecto de negocio"];
 fill("#estructura", h("div", { class: "org" },
 h("div", { class: "org__top", "data-mesa": "decision" },
 h("h4", null, "Mesa de decisión"),
-h("p", null, g.mesaDecision.funcion),
-h("p", { class: "org__meta" }, "Sesiona de forma " + g.mesaDecision.cadencia + " y rinde cuentas a " + g.mesaDecision.rindeCuentas + ".")),
-h("ul", { class: "org__roles", "aria-label": "Roles de gobierno del programa" },
-g.roles.filter((r) => principales.includes(r.rol)).map((r) =>
-h("li", null, r.rol + ":", h("strong", null, r.nombre)))),
+h("p", null, D.gobierno.mesaDecision.funcion)),
 h("div", { class: "org__mesas" }, D.mesas.map(mesaCard))));
 }
 
@@ -432,8 +416,7 @@ h("div", null, h("span", { class: "figure__val" }, c.valor), h("span", { class: 
 h("h4", { class: "subhead" }, "Ruta de mercado"),
 h("ol", { class: "phases" }, M.fases.map((f) => h("li", null, h("span", null, h("strong", null, f.nombre), ": " + f.detalle)))),
 h("h4", { class: "subhead" }, "Estrategia de producto en tres fases"),
-h("ol", { class: "phases" }, M.producto.map((f) => h("li", null, h("span", null, h("strong", null, f.nombre), ": " + f.detalle)))),
-h("p", { class: "source" }, "Fuente: " + M.fuente));
+h("ol", { class: "phases" }, M.producto.map((f) => h("li", null, h("span", null, h("strong", null, f.nombre), ": " + f.detalle)))));
 }
 
 /* =====================================================================
@@ -680,9 +663,6 @@ let filtroRiesgo = "todos";
 
 function renderRegulatorio() {
 const R = D.regulatorio;
-fill("#reg-estatus", R.estatus.map((e) => h("div", null, h("dt", null, e.titulo), h("dd", null, e.texto))));
-fill("#reg-plazos", R.plazos.map((p) =>
-h("li", null, h("strong", null, p.titulo), h("span", null, p.plazo), h("small", null, "Referencia: " + p.referencia))));
 fill("#aud-objetivos", R.objetivosAuditoria.map((o) => h("li", null, o)));
 
 const niveles = [];
@@ -727,92 +707,6 @@ h("td", null, r.regulacion),
 h("td", null, r.prueba),
 h("td", null, r.evidencia),
 h("td", null, h("span", { class: claseRiesgo(r.riesgo) }, r.riesgo))))));
-}
-
-/* =====================================================================
-7. EQUIPO Y RECURSOS
-===================================================================== */
-function renderEquipo() {
-fill("#roles", D.gobierno.roles.map((r) =>
-h("li", null, h("span", { class: "r-rol" }, r.rol), h("span", { class: "r-name" }, r.nombre), h("p", null, r.descripcion))));
-
-const C = D.cadencia;
-fill("#cadencia",
-h("p", null, "Estado: ", h("span", { class: "status status--decision" }, C.estado)),
-h("div", { class: "week-strip" }, C.dias.map((d) =>
-h("div", { class: d.mesa ? "is-on" : null, "data-mesa": d.mesa },
-h("strong", null, d.dia), d.mesa ? MESAS[d.mesa] : "Sin sesión"))),
-h("div", { class: "decision-bar" }, "Mesa de decisión: mensual, última semana de cada mes"),
-h("p", { class: "meta", style: "margin-top:.6rem" }, C.nota));
-
-const cols = ["otorgante", "ordenante", "habilitadores"];
-fill("#tabla-resp",
-h("thead", null, h("tr", null,
-h("th", { scope: "col" }, "Responsable"),
-h("th", { scope: "col", class: "t-min" }, "Objetivo"),
-cols.map((c) => h("th", { scope: "col", class: "center" }, MESAS[c])))),
-h("tbody", null, D.responsabilidades.map((r) => h("tr", null,
-h("th", { scope: "row" }, r.nombre, h("br"), h("span", { class: "meta" }, r.rol)),
-h("td", null, r.objetivo),
-cols.map((c) => {
-const on = r.mesas.includes(c);
-return h("td", { class: "center" },
-h("span", { class: "part" + (on ? " is-on" : ""), "data-mesa": c, role: "img", "aria-label": on ? "Participa" : "No participa" }));
-})))));
-
-/* Recursos */
-const P = D.recursos.posiciones;
-const total = totalPosiciones();
-const tipos = ["Estructural", "Operacional", "Implementación"];
-const porTipo = tipos.map((t) => ({ t: t, n: P.filter((p) => p.tipo === t).reduce((s, p) => s + p.n, 0) }));
-const slug = (t) => "t-" + t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-fill("#recursos-resumen", h("div", { class: "res-summary" },
-h("div", { class: "res-total" }, total, h("small", null, "posiciones por autorizar")),
-h("div", null,
-h("div", { class: "stack", role: "img", "aria-label": porTipo.map((x) => x.n + " " + x.t.toLowerCase()).join(", ") },
-porTipo.map((x) => h("span", { class: slug(x.t), style: "width:" + (x.n / total) * 100 + "%" }))),
-h("ul", { class: "res-legend" }, porTipo.map((x) =>
-h("li", null, h("span", { class: "sw " + slug(x.t), "aria-hidden": "true" }), x.n + " " + x.t.toLowerCase()))),
-h("p", { class: "res-bymesa" }, ["otorgante", "ordenante", "habilitadores"].map((m) =>
-h("span", { "data-mesa": m }, dotMesa(m), MESAS[m] + ": ", h("strong", null, totalPosiciones(m))))))));
-
-const filas = [];
-["otorgante", "ordenante", "habilitadores"].forEach((m) => {
-filas.push(h("tr", { class: "group-row" }, h("th", { colspan: "6", scope: "colgroup" }, MESAS[m] + " (" + totalPosiciones(m) + ")")));
-P.filter((p) => p.mesa === m).forEach((p) => filas.push(h("tr", null,
-h("td", null, p.actividad),
-h("td", null, p.responsable),
-h("td", null, p.posicion),
-h("td", { class: "num" }, p.n),
-h("td", null, p.tipo),
-h("td", null, p.temporalidad))));
-});
-fill("#tabla-recursos",
-h("caption", null, "Fuente: " + D.recursos.fuente + ". Servicios de desarrollo externo contados como 1 mientras se dimensionan."),
-h("thead", null, h("tr", null,
-h("th", { scope: "col", class: "t-min" }, "Actividad"),
-h("th", { scope: "col" }, "Responsable"),
-h("th", { scope: "col" }, "Posición"),
-h("th", { scope: "col", class: "num" }, "Núm."),
-h("th", { scope: "col" }, "Tipo"),
-h("th", { scope: "col" }, "Temporalidad"))),
-h("tbody", null, filas));
-
-fill("#recursos-aprobacion", D.recursos.enAprobacion.map((r) =>
-h("div", { class: "res-note" },
-h("strong", null, "En proceso de aprobación, fuera de las " + total + ": "),
-r.n + " " + r.posicion.toLowerCase() + " para " + MESAS[r.mesa] + " (" + r.responsable + "). " + r.detalle)));
-
-fill("#consultor", D.recursos.consultor.map((c) =>
-h("li", null,
-h("div", null, tagMesa(c.mesa), c.detalle ? h("p", null, c.detalle) : h("p", null, "Cuenta con capacidades internas.")),
-h("span", { class: "status " + (c.requiere ? "status--decision" : "status--hecho") }, c.requiere ? "Sí requiere" : "No requiere"))));
-
-fill("#documentos", h("div", { class: "docs" }, D.documentos.map((d) =>
-h("section", null,
-h("h4", null, d.grupo),
-h("ul", null, d.items.map((i) => h("li", null, i))),
-h("a", { href: d.enlace, target: "_blank", rel: "noopener noreferrer" }, "Abrir carpeta en Google Drive")))));
 }
 
 /* =====================================================================
@@ -874,7 +768,7 @@ renderEncabezado, renderHero, renderDecisionesAlertas, renderVencimientosResumen
 renderEstructura, renderArranque, renderMercado,
 renderFiltroMesas, pintarActividades, renderEDT,
 renderEstaSemana, renderSemanas,
-renderTimelineProyecto, renderCecoban, renderRegulatorio, renderEquipo
+renderTimelineProyecto, renderCecoban, renderRegulatorio
 ];
 pasos.forEach((fn) => {
 try { fn(); } catch (err) {
