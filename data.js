@@ -125,7 +125,7 @@ frentes: [
 { nombre: "Constitución de mesas", avance: 100 },
 { nombre: "Definición del consultor", avance: 80 },
 { nombre: "Identificación de recursos adicionales", avance: 80 },
-{ nombre: "Instalación de cadencia de sesiones", avance: null, estado: "Por autorizar" }
+{ nombre: "Instalación de cadencia de sesiones", avance: 100 }
 ]
 },
 
@@ -134,7 +134,6 @@ decisiones: [
 { titulo: "Autorizar el consultor externo para Habilitadores", detalle: "Para la documentación de procesos (manual de operaciones). La cotización del consultor se esperaba el 17-sep-2026.", estado: "Por autorizar" },
 { titulo: "Autorizar 20 posiciones adicionales", detalle: "13 para la Mesa Otorgante, 1 para la Mesa Ordenante y 6 para Habilitadores: 2 estructurales, 12 operacionales y 6 de implementación.", estado: "Por autorizar" },
 { titulo: "Dimensionar los servicios de desarrollo externo", detalle: "Construcción del sistema de originación, adaptación del core, PUC e integración, sin afectar a las células actuales.", estado: "En dimensionamiento" },
-{ titulo: "Autorizar la cadencia de sesiones", detalle: "Semanal el primer mes (miércoles Otorgante, jueves Habilitadores, viernes Ordenante) y después evaluar quincenal. Mesa de decisión mensual.", estado: "Por autorizar" },
 { titulo: "Aprobar el plan de trabajo con ruta crítica", detalle: "Actividades, alcance, responsables y fechas compromiso, para la Mesa de decisión de octubre.", estado: "Por definir" }
 ],
 
@@ -156,7 +155,7 @@ actividades: [
 { mesa: "decision", titulo: "Mesa de decisión de octubre: aprobar el plan de trabajo con actividades, alcance, responsables, fechas compromiso y ruta crítica", responsable: "Abigail Vásquez", inicio: "2026-10-26", fin: "2026-10-30", nota: "Fecha estimada: última semana de octubre", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "decision", titulo: "Autorizar el consultor externo para Habilitadores (manual de operaciones)", responsable: "Mesa de decisión", fechaTexto: "Por definir", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "decision", titulo: "Autorizar 20 posiciones adicionales y dimensionar los servicios de desarrollo externo", responsable: "Mesa de decisión", fechaTexto: "Por definir", fuente: "Mesa de decisión, 9 sep 2026" },
-{ mesa: "decision", titulo: "Autorizar la cadencia de sesiones de las mesas", responsable: "Mesa de decisión", fechaTexto: "Por autorizar", fuente: "Mesa de decisión, 9 sep 2026" },
+{ mesa: "decision", titulo: "Instalación de la cadencia de sesiones de las mesas", responsable: "Abigail Vásquez", fin: "2026-09-09", estado: "completado", fuente: "Mesa de decisión, 9 sep 2026" },
 
 /* ---- Mesa Otorgante ---- */
 { mesa: "otorgante", titulo: "Sesión de actividades de la mesa: responsables asignados y evaluación de capacidades", responsable: "Sergio Olivero", fin: "2026-08-26", estado: "completado", fuente: "Presentación Mesa Otorgante, 26 ago 2026" },
@@ -540,7 +539,7 @@ responsabilidades: [
 ],
 
 cadencia: {
-estado: "Por autorizar",
+estado: "Instalada",
 dias: [
 { dia: "Lunes", mesa: null },
 { dia: "Martes", mesa: null },
