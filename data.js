@@ -131,7 +131,7 @@ frentes: [
 
 /* Decisiones que requieren a la Mesa de decisión / Dirección */
 decisiones: [
-{ titulo: "Autorizar el consultor externo para Habilitadores", detalle: "Para la documentación de procesos (manual de operaciones). La cotización del consultor se esperaba el 17-sep-2026.", estado: "Por autorizar" },
+{ titulo: "Autorizar el consultor externo para Habilitadores", detalle: "Para la documentación de procesos (manual de operaciones). Ya se firmó el NDA con el proveedor; el 8 de octubre se valida el alcance de la propuesta para recibir la cotización.", estado: "Por autorizar" },
 { titulo: "Autorizar 20 posiciones adicionales", detalle: "13 para la Mesa Otorgante, 1 para la Mesa Ordenante y 6 para Habilitadores: 2 estructurales, 12 operacionales y 6 de implementación.", estado: "Por autorizar" },
 { titulo: "Dimensionar los servicios de desarrollo externo", detalle: "Construcción del sistema de originación, adaptación del core, PUC e integración, sin afectar a las células actuales.", estado: "En dimensionamiento" },
 { titulo: "Aprobar el plan de trabajo con ruta crítica", detalle: "Actividades, alcance, responsables y fechas compromiso, para la Mesa de decisión de octubre.", estado: "Por definir" }
@@ -163,9 +163,9 @@ actividades: [
 { mesa: "otorgante", titulo: "Propuesta de producto: mercado objetivo, buyer persona, competencia y estrategia en tres fases", responsable: "Diana Ángeles", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", titulo: "Propuesta de capacidad de pago y score de riesgo (conceptualmente correcta, sujeta a ajustes)", responsable: "Linda Romero", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", ref: "MO-01", titulo: "Compartir con el equipo la presentación de producto expuesta en la sesión", responsable: "Diana Ángeles", fechaTexto: "ASAP", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
-{ mesa: "otorgante", ref: "MO-02", titulo: "Compartir la presentación de la propuesta de capacidad de pago y score de riesgo", responsable: "Linda Romero", fin: "2026-09-15", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
-{ mesa: "otorgante", ref: "MO-03", titulo: "Gestionar una sesión con el Director de Riesgos para revisar la propuesta de capacidad de pago y sus ajustes", responsable: "Abigail Vásquez", fin: "2026-09-15", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
-{ mesa: "otorgante", ref: "MO-04", titulo: "Confirmar con CECOBAN qué incluye la variable “disponible” (variable inicial y ajustes)", responsable: "Nelly Trejo y equipo", fin: "2026-09-15", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
+{ mesa: "otorgante", ref: "MO-02", titulo: "Compartir la presentación de la propuesta de capacidad de pago y score de riesgo", responsable: "Linda Romero", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
+{ mesa: "otorgante", ref: "MO-03", titulo: "Sesión con el Director de Riesgos para revisar la propuesta de capacidad de pago y sus ajustes", responsable: "Abigail Vásquez", fin: "2026-09-30", nota: "Sesión programada para el miércoles 30 de septiembre", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
+{ mesa: "otorgante", ref: "MO-04", titulo: "Confirmar con CECOBAN qué incluye la variable “disponible” (variable inicial y ajustes)", responsable: "Nelly Trejo y equipo", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", titulo: "Modelo de negocio", responsable: "Diana Ángeles", inicio: "2026-09-21", fin: "2026-10-30", nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "otorgante", titulo: "Diseño de la fase 1 (Cash Express) con pricing basado en supuestos propios e información solicitada a BKAYA", responsable: "Mesa Otorgante", fechaTexto: "Por definir", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", titulo: "Metodología de capacidad de pago: presentación al Comité de Riesgos y notificación a Banxico", responsable: "Miguel Martínez y Riesgos", fechaTexto: "Por definir", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
@@ -173,7 +173,6 @@ actividades: [
 /* ---- Mesa Ordenante ---- */
 { mesa: "ordenante", titulo: "Sesión de contexto: plan de auditoría regulatoria, matriz maestra de 18 puntos y cronograma propuesto", responsable: "Christian Carreón", fin: "2026-08-24", estado: "completado", fuente: "Contexto Modelo Ordenante, 24 ago 2026" },
 { mesa: "ordenante", titulo: "Definición de capacidades: no requiere consultor; 1 posición adicional (aclaraciones vía SAAC) y 1 especialista de auditoría en aprobación", responsable: "Christian Carreón", fin: "2026-09-09", estado: "completado", fuente: "Mesa de decisión, 9 sep 2026" },
-{ mesa: "ordenante", titulo: "Planeación de auditoría: universo regulatorio y matriz de riesgos", responsable: "Rodrigo De Marchena", inicio: "2026-08-01", fin: "2026-09-30", fuente: "Cronograma de auditoría propuesto" },
 { mesa: "ordenante", titulo: "Gap assessment: matriz de brechas", responsable: "Rodrigo De Marchena", inicio: "2026-09-01", fin: "2026-10-31", fuente: "Cronograma de auditoría propuesto" },
 { mesa: "ordenante", titulo: "Modelo de operación ordenante", responsable: "Christian Carreón", inicio: "2026-09-21", fin: "2026-11-20", nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "ordenante", titulo: "Asignar responsable y necesidad de TI a cada punto de la matriz maestra de auditoría", responsable: "Christian Carreón", fechaTexto: "Por definir", fuente: "Columnas vacías en la versión del 24 ago 2026" },
@@ -183,10 +182,9 @@ actividades: [
 { mesa: "habilitadores", titulo: "Definición de capacidades: requiere consultor externo para el manual de operaciones y 6 posiciones adicionales", responsable: "Agustín Nava", fin: "2026-09-09", estado: "completado", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "habilitadores", titulo: "Draft de la estructura de trabajo (EDT) de la construcción del sistema, con 12 componentes", responsable: "Abigail Vásquez", fin: "2026-09-10", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Conexión de la banca al simulador de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-01", fin: "2026-09-18", estado: "completado", fuente: "Draft del timeline (actividad finalizada)" },
-{ mesa: "habilitadores", titulo: "Validar si se puede liberar un recurso temporal (posición de validador funcional)", responsable: "Abigail Vásquez", fin: "2026-09-11", fuente: "Minuta Habilitadores, 10 sep 2026" },
-{ mesa: "habilitadores", titulo: "Subir la matriz de cumplimiento regulatorio a la carpeta compartida", responsable: "Edsel Martínez", fin: "2026-09-11", fuente: "Minuta Habilitadores, 10 sep 2026" },
-{ mesa: "habilitadores", titulo: "Recibir la cotización del consultor externo", responsable: "Consultor externo", fin: "2026-09-17", nota: "Fecha estimada", fuente: "Minuta Habilitadores, 10 sep 2026" },
-{ mesa: "habilitadores", titulo: "Generar la matriz de pruebas de los módulos de conexión con CECOBAN", responsable: "Isaí Juárez, Mauricio Méndez, Alejandra Muñoz y Nelly Trejo", fin: "2026-09-25", fuente: "Minuta Habilitadores, 10 sep 2026" },
+{ mesa: "habilitadores", titulo: "Subir la matriz de cumplimiento regulatorio a la carpeta compartida", responsable: "Edsel Martínez", fin: "2026-09-11", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
+{ mesa: "habilitadores", titulo: "Recibir la cotización del consultor externo", responsable: "Agustín Nava", inicio: "2026-09-10", fin: "2026-10-08", nota: "En proceso. Ya se cuenta con el NDA con el proveedor; el 8 de octubre hay sesión para validar el alcance de la propuesta", fuente: "Minuta Habilitadores, 10 sep 2026" },
+{ mesa: "habilitadores", titulo: "Generar la matriz de pruebas de los módulos de conexión con CECOBAN", responsable: "Isaí Juárez, Mauricio Méndez, Alejandra Muñoz y Nelly Trejo", fin: "2026-09-25", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Periodo de pruebas con el simulador API de CECOBAN", responsable: "Por confirmar", inicio: "2026-09-14", fin: "2026-10-16", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "CECOBAN informa el esquema de recuperación de gastos", responsable: "CECOBAN", fin: "2026-10-16", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "Entrega de la carta vinculante a CECOBAN", responsable: "Gabriela Hernández (Legal)", inicio: "2026-10-19", fin: "2026-10-23", fuente: "Roadmap CECOBAN" },
@@ -270,7 +268,7 @@ habilitadores: [
 acuerdos: [
 "Cotización del consultor externo estimada para el 17 de septiembre.",
 "Matriz de pruebas de los módulos de conexión con CECOBAN al 25 de septiembre (Isaí Juárez, Mauricio Méndez, Alejandra Muñoz y Nelly Trejo).",
-"Validar la liberación de un recurso temporal como validador funcional y subir la matriz de cumplimiento regulatorio, ambos al 11 de septiembre."
+"Subir la matriz de cumplimiento regulatorio a la carpeta compartida el 11 de septiembre."
 ],
 alertas: [
 "Las autorizaciones de consultor y recursos siguen pendientes.",
@@ -362,7 +360,6 @@ filas: [
 mesa: "ordenante",
 nombre: "Plan de auditoría regulatoria (propuesto)",
 filas: [
-{ nombre: "Planeación: universo regulatorio y matriz de riesgos", inicio: "2026-08-01", fin: "2026-09-30" },
 { nombre: "Gap assessment: matriz de brechas", inicio: "2026-09-01", fin: "2026-10-31" },
 { nombre: "Procesos: walkthroughs CAN", inicio: "2026-10-01", fin: "2026-11-30" },
 { nombre: "Datos y sistemas: data lineage y pruebas de TI", inicio: "2026-11-01", fin: "2026-12-31" },
@@ -381,7 +378,7 @@ mesa: "habilitadores",
 nombre: "Habilitadores",
 filas: [
 { nombre: "Conexión a simulador CECOBAN", inicio: "2026-09-01", fin: "2026-09-18", estado: "completado" },
-{ nombre: "Matriz de pruebas", inicio: "2026-09-19", fin: "2026-09-25" },
+{ nombre: "Matriz de pruebas", inicio: "2026-09-19", fin: "2026-09-25", estado: "completado" },
 { nombre: "Construcción del sistema", inicio: "2026-10-01", fin: "2027-03-31" },
 { nombre: "Preparación operativa", inicio: "2027-05-03", fin: "2027-06-18" }
 ]
