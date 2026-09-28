@@ -13,8 +13,7 @@ Tablero estático (HTML, CSS y JavaScript puro, sin frameworks) para Dirección 
 | Resumen semanal | Vista automática de "esta semana" y resumen de cada semana con minutas |
 | Timeline del proyecto | Gantt por mesa, plan de auditoría regulatoria y lista de hitos |
 | Timeline CECOBAN | Roadmap de CECOBAN, tabla de detalle, flujo operativo y macroproceso de originación |
-| Regulatorio y auditoría | Estatus regulatorio, plazos clave y matriz maestra de auditoría filtrable por riesgo |
-| Equipo y recursos | Roles, cadencia, matriz de responsabilidades, recursos solicitados, consultor y documentos |
+| Regulatorio y auditoría | Objetivos de la auditoría y matriz maestra filtrable por nivel de riesgo |
 
 ## Archivos
 
@@ -51,3 +50,4 @@ Los estados (vencida, vence pronto, en curso, programada) se calculan solos con 
 ## Privacidad
 
 El contenido es información interna. En cuentas gratuitas de GitHub, un sitio de Pages es público aunque no aparezca en buscadores (la página incluye `noindex`). Para restringir el acceso se requiere GitHub Enterprise Cloud con Pages privado.
+
