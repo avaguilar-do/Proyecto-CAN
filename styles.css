@@ -334,6 +334,14 @@ padding: .75rem 1rem; margin-bottom: 1rem;
 .overdue p { margin: 0 0 .25rem; font-weight: 600; color: #7A2210; }
 .overdue ul { padding-left: 1.1rem; font-size: .9rem; color: var(--ink-2); }
 
+.defs-list { list-style: none; padding: 0; display: grid; gap: .6rem; }
+.defs-list li {
+background: var(--ice); border: 1px solid var(--line); border-left: 3px solid var(--sky);
+border-radius: var(--r-s); padding: .75rem .9rem;
+}
+.defs-list__txt { display: block; font-weight: 600; color: var(--navy); }
+.defs-list__meta { display: flex; flex-wrap: wrap; gap: .2rem 1rem; margin-top: .3rem; font-size: .875rem; color: var(--ink-2); }
+
 .edt { list-style: none; padding: 0; columns: 2 22rem; column-gap: 2rem; }
 .edt li { break-inside: avoid; display: grid; grid-template-columns: 3rem 1fr; gap: .5rem; padding: .45rem 0; border-top: 1px solid var(--line-soft); }
 .edt__code { font-weight: 700; color: var(--m-ordenante); font-variant-numeric: tabular-nums; }
@@ -739,3 +747,4 @@ body { background: #fff; font-size: 11pt; }
 a { color: inherit; text-decoration: none; }
 * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
