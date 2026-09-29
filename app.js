@@ -328,14 +328,18 @@ rail.style.setProperty("--hoy", pHoy + "%");
 }
 
 function renderDecisionesAlertas() {
-fill("#decisiones", D.decisiones.map((d) =>
+fill("#decisiones", !D.decisiones.length
+? h("li", { class: "empty" }, "No hay decisiones pendientes por el momento.")
+: D.decisiones.map((d) =>
 h("li", null,
 h("div", { class: "decision__head" },
 h("p", { class: "decision__title" }, d.titulo),
 h("span", { class: "status status--decision" }, d.estado)),
 h("p", { class: "decision__text" }, d.detalle))));
 
-fill("#alertas", D.alertas.map((a) =>
+fill("#alertas", !D.alertas.length
+? h("li", { class: "empty" }, "No identificados por el momento.")
+: D.alertas.map((a) =>
 h("li", null,
 h("div", { class: "alert__head" },
 h("p", { class: "alert__title" }, a.titulo),
@@ -464,6 +468,15 @@ fill("#lista-proximas", abiertas.length
 fill("#lista-realizadas", hechas.length
 ? hechas.map((a) => actItem(a))
 : h("li", { class: "empty" }, "Todavía no hay actividades completadas para esta mesa."));
+}
+
+function renderDefiniciones() {
+const items = D.definiciones || [];
+fill("#definiciones", items.length
+? items.map((d) => h("li", null,
+h("span", { class: "defs-list__txt" }, d.titulo),
+h("span", { class: "defs-list__meta" }, tagMesa(d.mesa), d.responsable ? h("span", null, "Responsable: " + d.responsable) : null)))
+: h("li", { class: "empty" }, "Sin definiciones pendientes por el momento."));
 }
 
 function renderEDT() {
@@ -766,7 +779,7 @@ Arranque
 const pasos = [
 renderEncabezado, renderHero, renderDecisionesAlertas, renderVencimientosResumen,
 renderEstructura, renderArranque, renderMercado,
-renderFiltroMesas, pintarActividades, renderEDT,
+renderFiltroMesas, pintarActividades, renderDefiniciones, renderEDT,
 renderEstaSemana, renderSemanas,
 renderTimelineProyecto, renderCecoban, renderRegulatorio
 ];
