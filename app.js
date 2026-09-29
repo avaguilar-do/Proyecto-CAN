@@ -383,7 +383,7 @@ h("p", { class: "mesa__obj" }, m.objetivo),
 h("h5", null, "Entregables principales"),
 h("ul", { class: "mesa__list" }, m.entregables.map((e) => h("li", null, e))),
 h("details", null,
-h("summary", null, "Integrantes (" + m.integrantes.length + ") y áreas"),
+h("summary", null, "Integrantes (" + m.integrantes.length + ") y áreas (" + m.areas.length + ")"),
 h("p", null, m.integrantes.join(", ") + "."),
 h("p", null, "Áreas: " + m.areas.join(", ") + ".")));
 }
