@@ -69,6 +69,7 @@ entregables: [
 "Certificación como banco con cuentas otorgantes",
 "Modelo de negocio: mercado objetivo y producto de crédito y captación",
 "Modelo y gestión de riesgos: KRI, límites, prelación, riesgo operativo y de crédito",
+"Cálculo de capacidad de pago y políticas de otorgamiento",
 "Modelo de rentabilidad: ingresos, gastos, costo de fondeo, originación, servicing y margen",
 "Journey del cliente para crédito domiciliado",
 "Comercialización: masificación de productos, canales y comisiones"
@@ -83,7 +84,7 @@ cadencia: "Viernes",
 objetivo:
 "Emitir el dictamen de Auditoría Interna que certifica el cumplimiento regulatorio para operar como CAN.",
 areas: ["Operaciones", "Tecnología y Datos", "Regulatorio", "Riesgos", "Auditoría"],
-integrantes: ["Agustín Nava", "Miguel Matus", "Gabriela Hernández", "Christian Carreón", "Rosaura Flores", "Nelly Trejo", "Karen Ramírez", "Rodrigo De Marchena", "Berenice Serrano", "Leonor Arias"],
+integrantes: ["Agustín Nava", "Miguel Matus", "Gabriela Hernández", "Christian Carreón", "Rosaura Flores", "Nelly Trejo", "Karen Ramírez", "Rodrigo De Marchena", "Berenice Serrano", "Mauricio Méndez", "Leonor Arias"],
 entregables: [
 "Certificación como banco con cuentas ordenantes",
 "Mecanismo de identificación de cuenta ordenante",
@@ -109,7 +110,7 @@ entregables: [
 "Construcción del sistema de originación",
 "Adaptación del core bancario",
 "Pruebas e integración con CECOBAN",
-"Cálculo de capacidad de pago, políticas de otorgamiento y motor de prelación",
+"Mecanismo de prelación",
 "Carta vinculante y contrato marco",
 "Manual de operaciones y evidencia para Auditoría",
 "Inicio de operaciones (29-jun-2027)"
@@ -176,7 +177,7 @@ actividades: [
 { mesa: "habilitadores", titulo: "Conexión de la banca al simulador de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-01", fin: "2026-09-18", estado: "completado", fuente: "Draft del timeline (actividad finalizada)" },
 { mesa: "habilitadores", titulo: "Subir la matriz de cumplimiento regulatorio a la carpeta compartida", responsable: "Edsel Martínez", fin: "2026-09-11", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Revisar con el proveedor del Core Bancario la cotización para la configuración de reserva de descuentos y aplicación de prelaciones sobre cuentas", responsable: "Miguel Matus", fechaTexto: "ASAP" },
-{ mesa: "habilitadores", titulo: "Recibir la cotización del consultor externo", responsable: "Rosaura Flores y Sergio Olivero", inicio: "2026-09-10", fin: "2026-10-08", nota: "En proceso. Ya se cuenta con el NDA con el proveedor; el 8 de octubre hay sesión para validar el alcance de la propuesta", fuente: "Minuta Habilitadores, 10 sep 2026" },
+{ mesa: "habilitadores", titulo: "Recibir la cotización del consultor externo", responsable: "Rosaura Flores y Sergio Olivero", fin: "2026-10-12", nota: "El 12 de octubre se tendrá sesión con Akya para validar el alcance de la propuesta", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Generar la matriz de pruebas de los módulos de conexión con CECOBAN", responsable: "Isaí Juárez, Mauricio Méndez, Alejandra Muñoz y Nelly Trejo", fin: "2026-09-25", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Periodo de pruebas con el simulador API de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-14", fin: "2026-10-16", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "CECOBAN informa el esquema de recuperación de gastos", responsable: "TBD", fin: "2026-10-16", fuente: "Roadmap CECOBAN" },
@@ -315,7 +316,7 @@ fuentes: ["Contexto Modelo Ordenante, 24 ago 2026", "Contexto Habilitadores, 25 
 timelineProyecto: {
 inicio: "2026-08-01",
 fin: "2027-06-30",
-nota: "Draft de alto nivel presentado en la Mesa de decisión del 9 de septiembre de 2026. Las fechas de las mesas son aproximadas y se confirmarán con el plan de trabajo y la ruta crítica.",
+nota: "Draft de alto nivel. Las fechas de las mesas son aproximadas y se confirmarán con el plan de trabajo y la ruta crítica.",
 grupos: [
 {
 mesa: "programa",
@@ -588,4 +589,3 @@ items: ["Especificaciones técnicas CAN v1.2", "Guía de conexión al simulador 
 }
 ]
 };
-
