@@ -663,9 +663,6 @@ h("span", null, h("span", { class: "flow__label" }, "Banco ordenante"), p.ordena
 });
 celdas.push(h("div", { class: "flow__close" }, h("strong", null, "5. "), D.flujoCierre));
 fill("#flujo-cecoban", h("div", { class: "flow" }, celdas));
-
-fill("#macroproceso", D.macroproceso.map((p) =>
-h("li", null, h("strong", null, p.nombre), p.detalle)));
 }
 
 /* =====================================================================
