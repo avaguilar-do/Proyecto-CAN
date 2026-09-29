@@ -475,7 +475,7 @@ const items = D.definiciones || [];
 fill("#definiciones", items.length
 ? items.map((d) => h("li", null,
 h("span", { class: "defs-list__txt" }, d.titulo),
-h("span", { class: "defs-list__meta" }, tagMesa(d.mesa), d.responsable ? h("span", null, "Responsable: " + d.responsable) : null)))
+h("span", { class: "defs-list__meta" }, d.mesa ? tagMesa(d.mesa) : null, d.responsable ? h("span", null, "Responsable: " + d.responsable) : null)))
 : h("li", { class: "empty" }, "Sin definiciones pendientes por el momento."));
 }
 
@@ -500,7 +500,7 @@ const lunes = sumarDias(HOY, -((HOY.getDay() + 6) % 7));
 const domingo = sumarDias(lunes, 6);
 fill("#semana-actual-rango", "Del " + fDM(lunes) + " al " + fCorta(domingo) + ". Se calcula automáticamente con las fechas registradas.");
 
-const abiertas = ACTS.filter(ABIERTA);
+const abiertas = ACTS.filter((a) => ABIERTA(a) && !a.ocultarEnSemana);
 const vencen = abiertas.filter((a) => a._fin && a._fin >= HOY && a._fin <= domingo).sort(ordenProximas);
 const enCurso = abiertas.filter((a) => a._ini && a._ini <= HOY && a._fin > domingo).sort(ordenProximas);
 const vencidas = abiertas.filter((a) => a._est.k === "vencida").sort(ordenProximas);
@@ -546,9 +546,9 @@ h("h5", null, dotMesa(mesa), MESAS[mesa] || mesa),
 h("ul", null, pts.map((p) => h("li", null, p)))))),
 h("div", { class: "split split--tight" },
 lista("Acuerdos y decisiones", s.acuerdos),
-lista("Alertas", s.alertas, "alert")),
+lista("Consideraciones", s.alertas, "alert")),
 lista("Siguientes pasos", s.siguientes),
-s.fuentes ? h("p", { class: "week__src" }, "Fuentes: " + s.fuentes.join("; ") + ".") : null
+s.fuentes ? h("p", { class: "week__src" }, "Sesiones: " + s.fuentes.join("; ") + ".") : null
 ];
 };
 const pintar = () => {
