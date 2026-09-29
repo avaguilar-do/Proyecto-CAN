@@ -145,7 +145,8 @@ h("span", { class: "act__mon" }, MES[d.getMonth()]),
 h("span", { class: "act__year" }, d.getFullYear()))
 : h("span", { class: "act__date", "data-mesa": a.mesa }, h("span", { class: "act__nodate" }, "Sin fecha"));
 const rango = a._ini && a._fin && +a._ini !== +a._fin ? fRango(a._ini, a._fin) : null;
-const notas = [a.nota, a.fuente].filter(Boolean).join(". ");
+/* En modo compacto (tablero) se muestra la nota, pero no la fuente */
+const notas = (compacto ? [a.nota] : [a.nota, a.fuente]).filter(Boolean).join(". ");
 return h("li", { class: "act act--" + a._est.k },
 fechaBloque,
 h("div", { class: "act__body" },
@@ -154,7 +155,7 @@ h("p", { class: "act__meta" },
 tagMesa(a.mesa),
 a.responsable ? h("span", null, "Responsable: " + a.responsable) : null,
 rango ? h("span", null, rango) : null),
-!compacto && notas ? h("p", { class: "act__src" }, notas) : null),
+notas ? h("p", { class: "act__src" }, notas) : null),
 chip(a._est));
 }
 
