@@ -63,8 +63,8 @@ lideres: [{ rol: "Líder", nombre: "Sergio Olivero" }],
 cadencia: "Miércoles",
 objetivo:
 "Diversificar el portafolio de banca minorista con productos de crédito y captación originados vía CAN y llevarlos a implementación.",
-areas: ["Producto", "Finanzas", "Canales", "Estrategia", "Riesgos", "Operaciones"],
-integrantes: ["Sergio Olivero", "Carlos Budar", "Rubén Cohen", "Diana Ángeles", "Karen Ramírez", "Rosaura Flores", "Christian Carreón", "Nelly Trejo", "Agustín Nava", "Miguel Martínez", "Federico Lage", "Aura Marrón", "Leonor Arias"],
+areas: ["Finanzas", "Canales", "Estrategia", "Riesgos", "Operaciones", "Jurídico"],
+integrantes: ["Sergio Olivero", "Carlos Budar", "Rubén Cohen", "Diana Angeles", "Karen Ramírez", "Rosaura Flores", "Christian Carreón", "Nelly Trejo", "Agustín Nava", "Miguel Martínez", "Federico Lage", "Aura Marrón", "Leonor Arias"],
 entregables: [
 "Certificación como banco con cuentas otorgantes",
 "Modelo de negocio: mercado objetivo y producto de crédito y captación",
@@ -82,7 +82,7 @@ lideres: [{ rol: "Líder", nombre: "Christian Carreón" }],
 cadencia: "Viernes",
 objetivo:
 "Emitir el dictamen de Auditoría Interna que certifica el cumplimiento regulatorio para operar como CAN.",
-areas: ["Operaciones", "TI", "Regulatorio", "Riesgos", "Auditoría"],
+areas: ["Operaciones", "Tecnología y Datos", "Regulatorio", "Riesgos", "Auditoría"],
 integrantes: ["Agustín Nava", "Miguel Matus", "Gabriela Hernández", "Christian Carreón", "Rosaura Flores", "Nelly Trejo", "Karen Ramírez", "Rodrigo De Marchena", "Berenice Serrano", "Leonor Arias"],
 entregables: [
 "Certificación como banco con cuentas ordenantes",
@@ -156,13 +156,13 @@ actividades: [
 /* ---- Mesa Otorgante ---- */
 { mesa: "otorgante", titulo: "Sesión de actividades de la mesa: responsables asignados y evaluación de capacidades", responsable: "Sergio Olivero", fin: "2026-08-26", estado: "completado", fuente: "Presentación Mesa Otorgante, 26 ago 2026" },
 { mesa: "otorgante", titulo: "Definición de capacidades", responsable: "Sergio Olivero", fin: "2026-09-09", estado: "completado", fuente: "Mesa de decisión, 9 sep 2026" },
-{ mesa: "otorgante", titulo: "Presentación Propuesta de producto: mercado objetivo, buyer persona, competencia y estrategia en tres fases", responsable: "Diana Ángeles", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
+{ mesa: "otorgante", titulo: "Presentación Propuesta de producto: mercado objetivo, buyer persona, competencia y estrategia en tres fases", responsable: "Diana Angeles", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", titulo: "Propuesta de capacidad de pago y score de riesgo (conceptualmente correcta, sujeta a ajustes)", responsable: "Linda Romero", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
-{ mesa: "otorgante", ref: "MO-01", titulo: "Compartir con el equipo la presentación de producto expuesta en la sesión", responsable: "Diana Ángeles", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
+{ mesa: "otorgante", ref: "MO-01", titulo: "Compartir con el equipo la presentación de producto expuesta en la sesión", responsable: "Diana Angeles", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", ref: "MO-02", titulo: "Compartir la presentación de la propuesta de capacidad de pago y score de riesgo", responsable: "Linda Romero", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", titulo: "Sesión con el Director de Riesgos para revisar la propuesta de capacidad de pago y sus ajustes", responsable: "Abigail Vásquez", fin: "2026-10-02", nota: "Sesión programada para el 2 de octubre", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", ref: "MO-04", titulo: "Confirmar con CECOBAN qué incluye la variable “disponible” (variable inicial y ajustes)", responsable: "Nelly Trejo y equipo", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
-{ mesa: "otorgante", titulo: "Modelo de negocio", responsable: "Diana Ángeles", inicio: "2026-09-21", fin: "2026-10-30", ocultarEnSemana: true, nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
+{ mesa: "otorgante", titulo: "Modelo de negocio", responsable: "Diana Angeles", inicio: "2026-09-21", fin: "2026-10-30", ocultarEnSemana: true, nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
 
 /* ---- Mesa Ordenante ---- */
 { mesa: "ordenante", titulo: "Sesión de contexto: plan de auditoría regulatoria, matriz maestra de 18 puntos y cronograma propuesto", responsable: "Christian Carreón", fin: "2026-08-24", estado: "completado", fuente: "Contexto Modelo Ordenante, 24 ago 2026" },
@@ -517,7 +517,7 @@ responsabilidades: [
 { nombre: "Abigail Vásquez", rol: "Project Manager", objetivo: "Coordina el día a día: plan de trabajo, entregables, cadencia, gestión y seguimiento entre mesas.", mesas: ["otorgante", "ordenante", "habilitadores"] },
 { nombre: "Mauricio Méndez", rol: "Arquitecto de negocio", objetivo: "Habilita el modelo operativo integral de prospección, otorgamiento y servicio.", mesas: ["habilitadores"] },
 { nombre: "Carlos Budar", rol: "Rentabilidad", objetivo: "Gestiona el modelo de rentabilidad: ingresos, gastos y costos de fondeo, originación y servicing.", mesas: ["otorgante"] },
-{ nombre: "Diana Ángeles", rol: "Modelo de negocio y producto", objetivo: "Define la propuesta de valor del producto: mercado objetivo, oferta de crédito y captación, y conceptualización del cliente.", mesas: ["otorgante"] },
+{ nombre: "Diana Angeles", rol: "Modelo de negocio y producto", objetivo: "Define la propuesta de valor del producto: mercado objetivo, oferta de crédito y captación, y conceptualización del cliente.", mesas: ["otorgante"] },
 { nombre: "Rodrigo De Marchena", rol: "Certificación y auditoría", objetivo: "Garantiza el cumplimiento de auditoría y certificación mediante evidencia documental y el dictamen de Auditoría Interna.", mesas: ["otorgante", "ordenante", "habilitadores"] },
 { nombre: "Karen Ramírez", rol: "Journey funcional", objetivo: "Diseña y optimiza el journey del cliente, alineando procesos, controles y tecnología.", mesas: ["otorgante", "ordenante", "habilitadores"] },
 { nombre: "Diana Torres", rol: "Procesos y atención a clientes", objetivo: "Diseña e implementa los procesos de atención y servicio al cliente, y la gestión de aclaraciones.", mesas: ["habilitadores"] },
@@ -544,8 +544,8 @@ nota: "El primer mes las sesiones son semanales; después se evaluará cambiarla
 recursos: {
 fuente: "Mesa de decisión, 9 sep 2026",
 posiciones: [
-{ mesa: "otorgante", actividad: "Mercado objetivo: oportunidad, barreras de entrada y definición de fases", responsable: "Diana Ángeles", posicion: "Especialista", n: 1, tipo: "Estructural", temporalidad: "Por definir" },
-{ mesa: "otorgante", actividad: "Producto crédito y captación: competitividad, precio, monto y comisiones", responsable: "Diana Ángeles", posicion: "Gerente", n: 1, tipo: "Estructural", temporalidad: "Por definir" },
+{ mesa: "otorgante", actividad: "Mercado objetivo: oportunidad, barreras de entrada y definición de fases", responsable: "Diana Angeles", posicion: "Especialista", n: 1, tipo: "Estructural", temporalidad: "Por definir" },
+{ mesa: "otorgante", actividad: "Producto crédito y captación: competitividad, precio, monto y comisiones", responsable: "Diana Angeles", posicion: "Gerente", n: 1, tipo: "Estructural", temporalidad: "Por definir" },
 { mesa: "otorgante", actividad: "Procesos, atención a clientes y ciclo operativo mensual", responsable: "Diana Torres", posicion: "Gerente", n: 1, tipo: "Operacional", temporalidad: "Permanente" },
 { mesa: "otorgante", actividad: "Procesos, atención a clientes y ciclo operativo mensual", responsable: "Diana Torres", posicion: "Coordinador", n: 1, tipo: "Operacional", temporalidad: "Permanente" },
 { mesa: "otorgante", actividad: "Procesos, atención a clientes y ciclo operativo mensual", responsable: "Diana Torres", posicion: "Especialistas (post venta)", n: 3, tipo: "Operacional", temporalidad: "Permanente" },
@@ -588,3 +588,4 @@ items: ["Especificaciones técnicas CAN v1.2", "Guía de conexión al simulador 
 }
 ]
 };
+
