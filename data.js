@@ -160,9 +160,9 @@ actividades: [
 { mesa: "otorgante", titulo: "Propuesta de capacidad de pago y score de riesgo (conceptualmente correcta, sujeta a ajustes)", responsable: "Linda Romero", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", ref: "MO-01", titulo: "Compartir con el equipo la presentación de producto expuesta en la sesión", responsable: "Diana Ángeles", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", ref: "MO-02", titulo: "Compartir la presentación de la propuesta de capacidad de pago y score de riesgo", responsable: "Linda Romero", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
-{ mesa: "otorgante", ref: "MO-03", titulo: "Sesión con el Director de Riesgos para revisar la propuesta de capacidad de pago y sus ajustes", responsable: "Abigail Vásquez", fin: "2026-09-30", nota: "Sesión programada para el miércoles 30 de septiembre", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
+{ mesa: "otorgante", titulo: "Sesión con el Director de Riesgos para revisar la propuesta de capacidad de pago y sus ajustes", responsable: "Abigail Vásquez", fin: "2026-10-01", nota: "Sesión programada para el 1 de octubre", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", ref: "MO-04", titulo: "Confirmar con CECOBAN qué incluye la variable “disponible” (variable inicial y ajustes)", responsable: "Nelly Trejo y equipo", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
-{ mesa: "otorgante", titulo: "Modelo de negocio", responsable: "Diana Ángeles", inicio: "2026-09-21", fin: "2026-10-30", nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
+{ mesa: "otorgante", titulo: "Modelo de negocio", responsable: "Diana Ángeles", inicio: "2026-09-21", fin: "2026-10-30", ocultarEnSemana: true, nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
 
 /* ---- Mesa Ordenante ---- */
 { mesa: "ordenante", titulo: "Sesión de contexto: plan de auditoría regulatoria, matriz maestra de 18 puntos y cronograma propuesto", responsable: "Christian Carreón", fin: "2026-08-24", estado: "completado", fuente: "Contexto Modelo Ordenante, 24 ago 2026" },
@@ -188,7 +188,7 @@ actividades: [
 
 /* Definiciones pendientes que se muestran en la pestaña Actividades */
 definiciones: [
-{ mesa: "habilitadores", titulo: "Definir dónde se ejecutará el flujo de otorgamiento (¿nueva aplicación? ¿PUC?)" }
+{ titulo: "Definir dónde se ejecutará el flujo de otorgamiento (¿nueva aplicación? ¿PUC?)", responsable: "Todas las mesas" }
 ],
 
 /* Draft de la EDT de construcción del sistema */
@@ -217,27 +217,25 @@ titular: "La Mesa Otorgante presentó la propuesta de producto y la arquitectura
 sesiones: [{ mesa: "otorgante", fecha: "2026-09-15", nombre: "Seguimiento Mesa Otorgante" }],
 puntos: {
 otorgante: [
-"Propuesta de producto con enfoque jobs to be done: de 5.4 M de pensionados, 2.75 M quedan hoy fuera del crédito por descuento vía nómina por contar solo con la pensión mínima garantizada.",
 "El cliente objetivo compite contra el préstamo familiar, el fiado o el empeño, y decide por rapidez, discreción y certeza de aprobación. La variable competitiva es la velocidad para liberar capacidad de pago.",
-"Estrategia en tres fases según el mecanismo de cobro: Cash Express con pago voluntario, anticipo de pensión y Cash Loan con cargo a cuenta (requiere portar la pensión) y, al final, cobro vía CAN.",
-"Regla de originación con tope de capacidad de pago de 30%; los montos mayores a 3,000 pesos se otorgan a dos meses. El CAT aún no se calcula.",
-"Capacidad de pago = depósito neto − obligaciones externas (círculo de crédito) − reserva de liquidez (piso de 30%). El score pondera comportamiento, presión financiera, estabilidad y capacidad; se simularán factores de utilización de 30%, 40% y 50%."
+"Se propone Estrategia en tres fases según el mecanismo de cobro: Cash Express con pago voluntario, anticipo de pensión y Cash Loan con cargo a cuenta (requiere portar la pensión) y, al final, cobro vía CAN.",
+"Se propone Regla de originación con tope de capacidad de pago de 30%; los montos mayores a 3,000 pesos se otorgan a dos meses. El CAT aún no se calcula.",
+"Se propone Capacidad de pago = depósito neto − obligaciones externas (círculo de crédito) − reserva de liquidez (piso de 30%). El score pondera comportamiento, presión financiera, estabilidad y capacidad; se simularán factores de utilización de 30%, 40% y 50%."
 ],
 habilitadores: [
 "La conexión al simulador de CECOBAN se reporta como finalizada; el periodo de pruebas con el simulador API corre del 14 de septiembre al 16 de octubre."
 ]
 },
 acuerdos: [
-"MO-01 a MO-04: compartir las presentaciones de producto y de capacidad de pago, agendar sesión con el Director de Riesgos y confirmar con CECOBAN el alcance de la variable “disponible”.",
+"Compartir las presentaciones de producto y de capacidad de pago, agendar sesión con el Director de Riesgos y confirmar con CECOBAN el alcance de la variable “disponible”.",
 "La propuesta de capacidad de pago se consideró conceptualmente correcta, sujeta a ajustes de detalle."
 ],
 alertas: [
-"Riesgos: el foco en Cash Express no debe desviar los plazos del CAN; la metodología de capacidad de pago tiene tiempos propios ante el Comité de Riesgos y Banxico.",
+"El foco en Cash Express no debe desviar los plazos del CAN; la metodología de capacidad de pago tiene tiempos propios ante el Comité de Riesgos y Banxico.",
 "Falta confirmar si la variable “disponible” de CECOBAN incluye los compromisos internos de cada banco y cómo refleja la prelación."
 ],
 siguientes: [
 "Concentrar el diseño en la fase 1 (Cash Express) y sustituir el pricing de mercado por un modelo con supuestos propios.",
-"Solicitar información a BKAYA para el modelado y evaluar con ellos el producto digital.",
 "Avanzar en paralelo procesos y conexiones con CECOBAN, domiciliación y prelación en la mesa de Habilitadores."
 ],
 fuentes: ["Minuta Mesa Otorgante, 15 sep 2026", "Draft del timeline, Mesa de decisión"]
@@ -252,9 +250,9 @@ sesiones: [
 ],
 puntos: {
 decision: [
-"Metodología de trabajo: Abigail Vásquez como Project Manager, Isaí Juárez como Product Owner, Juan Ramón Becerra como arquitecto y Mauricio Méndez como arquitecto de negocio.",
 "Avance del arranque: sesión de entendimiento y constitución de mesas al 100%; definición del consultor e identificación de recursos al 80%; cadencia de sesiones por autorizar.",
-"Solo Habilitadores requiere consultor externo, para la documentación de procesos (manual de operaciones).",
+"Se requiere consultor para (1) desarrollo y validación de la estrategia, incluyendo cumplimiento, diseño de producto, validación de mercado, procesos y ciclo de vida; (2) acompañamiento de program management y proceso de implementación; (3) la función de arquitecto de negocio; y (4) generación de manuales.",
+"Metodología de trabajo: Se propuso a Juan Ramón Becerra como arquitecto, Abigail Vásquez como Project Manager, Isaí Juárez como Product Owner y Mauricio Méndez como arquitecto de negocio.",
 "Se solicitaron 20 posiciones adicionales: 13 para la Mesa Otorgante, 1 para la Mesa Ordenante y 6 para Habilitadores."
 ],
 habilitadores: [
@@ -263,7 +261,7 @@ habilitadores: [
 ]
 },
 acuerdos: [
-"Cotización del consultor externo estimada para el 17 de septiembre.",
+"Se solicitarán ajustes a la cotización del consultor Akya.",
 "Matriz de pruebas de los módulos de conexión con CECOBAN al 25 de septiembre (Isaí Juárez, Mauricio Méndez, Alejandra Muñoz y Nelly Trejo).",
 "Subir la matriz de cumplimiento regulatorio a la carpeta compartida el 11 de septiembre."
 ],
@@ -273,7 +271,6 @@ alertas: [
 "Falta definir dónde se ejecutará el flujo de otorgamiento (¿nueva aplicación? ¿PUC?) y los formatos de contrato."
 ],
 siguientes: [
-"Presentar el plan de trabajo con ruta crítica en la Mesa de decisión de octubre.",
 "Mantener el acompañamiento de equipos y el seguimiento de entregables."
 ],
 fuentes: ["Mesa de decisión, 9 sep 2026", "Minuta Habilitadores, 10 sep 2026"]
@@ -298,7 +295,7 @@ habilitadores: [
 "Se revisó el macroproceso de originación y administración (6 etapas), el flujo operativo con CECOBAN y la documentación técnica v1.2: especificaciones, simulador, schemas y ejemplos JSON."
 ],
 otorgante: [
-"Se asignaron responsables por actividad y se evaluaron capacidades: la mesa no requiere consultor, pero sí personal adicional en producto, procesos y operación."
+"Se asignaron responsables por actividad y se evaluaron capacidades."
 ]
 },
 acuerdos: [
