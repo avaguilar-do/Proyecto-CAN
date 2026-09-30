@@ -227,7 +227,7 @@ semanas: [
 {
 inicio: "2026-09-21",
 fin: "2026-09-25",
-titular: "La matriz de pruebas quedó lista y se entregó a la ABM, pero las pruebas técnicas con CECOBAN siguen detenidas por un problema de conectividad.",
+titular: "La matriz de pruebas quedó lista y se entregó a la ABM, las pruebas con el simulador están detenidas por un problema de conectividad.",
 sesiones: [
 { mesa: "habilitadores", fecha: "2026-09-24", nombre: "Seguimiento Habilitadores" },
 { mesa: "ordenante", fecha: "2026-09-25", nombre: "Seguimiento Modelo Ordenante" }
@@ -645,4 +645,3 @@ items: ["Especificaciones técnicas CAN v1.2", "Guía de conexión al simulador 
 }
 ]
 };
-
