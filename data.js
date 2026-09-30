@@ -155,9 +155,6 @@ actividades: [
 { mesa: "decision", titulo: "Sesión de entendimiento y constitución de las tres mesas de trabajo", responsable: "Abigail Vásquez", fin: "2026-09-09", estado: "completado", fuente: "Reportado en la Mesa de decisión, 9 sep 2026" },
 { mesa: "decision", titulo: "Primera Mesa de decisión: integración de resultados, metodología de trabajo y draft del timeline general", responsable: "Abigail Vásquez", fin: "2026-09-09", estado: "completado", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "decision", titulo: "Definición de roles de gobierno: Project Manager, Product Owner, arquitecto y arquitecto de negocio", responsable: "Mesa de decisión", fin: "2026-09-09", estado: "completado", fuente: "Mesa de decisión, 9 sep 2026" },
-{ mesa: "decision", titulo: "Mesa de decisión de octubre: aprobar el plan de trabajo con actividades, alcance, responsables, fechas compromiso y ruta crítica", responsable: "Abigail Vásquez", inicio: "2026-10-26", fin: "2026-10-30", nota: "Fecha estimada: última semana de octubre", fuente: "Mesa de decisión, 9 sep 2026" },
-{ mesa: "decision", titulo: "Autorizar el consultor externo para Habilitadores (manual de operaciones)", responsable: "Mesa de decisión", fechaTexto: "Por definir", fuente: "Mesa de decisión, 9 sep 2026" },
-{ mesa: "decision", titulo: "Autorizar 20 posiciones adicionales y dimensionar los servicios de desarrollo externo", responsable: "Mesa de decisión", fechaTexto: "Por definir", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "decision", titulo: "Instalación de la cadencia de sesiones de las mesas", responsable: "Abigail Vásquez", fin: "2026-09-09", estado: "completado", fuente: "Mesa de decisión, 9 sep 2026" },
 
 /* ---- Mesa Otorgante ---- */
@@ -169,13 +166,11 @@ actividades: [
 { mesa: "otorgante", ref: "MO-02", titulo: "Compartir la presentación de la propuesta de capacidad de pago y score de riesgo", responsable: "Linda Romero", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", titulo: "Sesión con el Director de Riesgos para revisar la propuesta de capacidad de pago y sus ajustes", responsable: "Abigail Vásquez", fin: "2026-10-02", nota: "Sesión programada para el 2 de octubre", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", ref: "MO-04", titulo: "Confirmar con CECOBAN qué incluye la variable “disponible” (variable inicial y ajustes)", responsable: "Nelly Trejo y equipo", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
-{ mesa: "otorgante", titulo: "Modelo de negocio", responsable: "Diana Angeles", inicio: "2026-09-21", fin: "2026-10-30", ocultarEnSemana: true, nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
 
 /* ---- Mesa Ordenante ---- */
 { mesa: "ordenante", titulo: "Sesión de contexto: plan de auditoría regulatoria, matriz maestra de 18 puntos y cronograma propuesto", responsable: "Christian Carreón", fin: "2026-08-24", estado: "completado", fuente: "Contexto Modelo Ordenante, 24 ago 2026" },
 { mesa: "ordenante", titulo: "Definición de capacidades", responsable: "Christian Carreón", fin: "2026-09-09", estado: "completado", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "ordenante", titulo: "Coordinar la sesión para generar las matrices de funcionalidades, necesidades y validaciones de cada etapa de los macroprocesos", responsable: "Isaí Juárez", fechaTexto: "ASAP", nota: "Con Berenice Serrano y Rodrigo De Marchena", fuente: "Minuta Modelo Ordenante, 25 sep 2026" },
-{ mesa: "ordenante", titulo: "Designar a la persona del área que participará en las sesiones de detalle de definiciones", responsable: "Gabriela Hernández", fechaTexto: "Por definir", fuente: "Minuta Modelo Ordenante, 25 sep 2026" },
 { mesa: "ordenante", titulo: "Avisar a la mesa en qué momentos se podrán certificar los avances y buscar espacios de trabajo conjunto en las definiciones", responsable: "Isaí Juárez y Abigail Vásquez", estado: "continuo", fuente: "Minuta Modelo Ordenante, 25 sep 2026" },
 { mesa: "ordenante", titulo: "Gap assessment: matriz de brechas", responsable: "Rodrigo De Marchena", inicio: "2026-09-01", fin: "2026-10-31", fuente: "Cronograma de auditoría propuesto" },
 { mesa: "ordenante", titulo: "Modelo de operación ordenante", responsable: "Christian Carreón", inicio: "2026-09-21", fin: "2026-11-20", nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
