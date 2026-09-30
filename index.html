@@ -33,8 +33,8 @@
 <div class="wrap">
 <div class="tabs" role="tablist" aria-label="Secciones del tablero">
 <button type="button" class="tab" role="tab" id="tab-tablero" data-tab="tablero" aria-controls="panel-tablero" aria-selected="true">Tablero</button>
-<button type="button" class="tab" role="tab" id="tab-actividades" data-tab="actividades" aria-controls="panel-actividades" aria-selected="false" tabindex="-1">Actividades</button>
 <button type="button" class="tab" role="tab" id="tab-semanal" data-tab="semanal" aria-controls="panel-semanal" aria-selected="false" tabindex="-1">Resumen semanal</button>
+<button type="button" class="tab" role="tab" id="tab-actividades" data-tab="actividades" aria-controls="panel-actividades" aria-selected="false" tabindex="-1">Actividades</button>
 <button type="button" class="tab" role="tab" id="tab-timeline" data-tab="timeline" aria-controls="panel-timeline" aria-selected="false" tabindex="-1">Timeline del proyecto</button>
 <button type="button" class="tab" role="tab" id="tab-cecoban" data-tab="cecoban" aria-controls="panel-cecoban" aria-selected="false" tabindex="-1">Timeline CECOBAN</button>
 <button type="button" class="tab" role="tab" id="tab-regulatorio" data-tab="regulatorio" aria-controls="panel-regulatorio" aria-selected="false" tabindex="-1">Regulatorio y auditoría</button>
@@ -101,6 +101,25 @@
 </div>
 </section>
 
+<!-- ============ RESUMEN SEMANAL ============ -->
+<section class="panel" id="panel-semanal" role="tabpanel" aria-labelledby="tab-semanal" tabindex="0" hidden>
+<header class="panel__head">
+<h2>Resumen semanal</h2>
+<p>Lo más importante de cada semana, a partir de las minutas y presentaciones de las mesas.</p>
+</header>
+<section class="block block--now" aria-labelledby="h-esta-semana">
+<h3 id="h-esta-semana">Esta semana</h3>
+<p class="meta" id="semana-actual-rango"></p>
+<div class="now-grid" id="semana-actual"></div>
+</section>
+<div class="weeks">
+<nav class="weeks__index" aria-label="Semanas con resumen">
+<ul id="semanas-indice"></ul>
+</nav>
+<article class="weeks__detail" id="semana-detalle" aria-live="polite"></article>
+</div>
+</section>
+
 <!-- ============ ACTIVIDADES ============ -->
 <section class="panel" id="panel-actividades" role="tabpanel" aria-labelledby="tab-actividades" tabindex="0" hidden>
 <header class="panel__head">
@@ -128,25 +147,6 @@
 <p class="meta">Draft de la EDT compartido en la sesión Mesa de Habilitadores.</p>
 <ol class="edt" id="edt"></ol>
 </section>
-</section>
-
-<!-- ============ RESUMEN SEMANAL ============ -->
-<section class="panel" id="panel-semanal" role="tabpanel" aria-labelledby="tab-semanal" tabindex="0" hidden>
-<header class="panel__head">
-<h2>Resumen semanal</h2>
-<p>Lo más importante de cada semana, a partir de las minutas y presentaciones de las mesas.</p>
-</header>
-<section class="block block--now" aria-labelledby="h-esta-semana">
-<h3 id="h-esta-semana">Esta semana</h3>
-<p class="meta" id="semana-actual-rango"></p>
-<div class="now-grid" id="semana-actual"></div>
-</section>
-<div class="weeks">
-<nav class="weeks__index" aria-label="Semanas con resumen">
-<ul id="semanas-indice"></ul>
-</nav>
-<article class="weeks__detail" id="semana-detalle" aria-live="polite"></article>
-</div>
 </section>
 
 <!-- ============ TIMELINE DEL PROYECTO ============ -->
@@ -181,7 +181,6 @@
 <h3 id="h-flujo">Flujo operativo con CECOBAN</h3>
 <p class="meta">CECOBAN es el eje central entre el banco que otorga el crédito y el banco donde el cliente recibe su nómina.</p>
 <div id="flujo-cecoban"></div>
-</section>
 </section>
 </section>
 
