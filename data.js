@@ -132,20 +132,19 @@ frentes: [
 
 /* Decisiones que requieren a la Mesa de decisión / Dirección */
 /* Vacío muestra en el tablero "No hay decisiones pendientes por el momento" */
-decisiones: [
-{ titulo: "Solución para administrar la prelación", detalle: "CECOBAN asigna la prelación, pero el core no la registra ni la administra. Está en análisis con el proveedor si se resuelve en el core o con un desarrollo externo que después se conecte.", estado: "En análisis" },
-{ titulo: "Aprobar la consultoría con el alcance redefinido", detalle: "Se pidió a la firma acompañar todo el proyecto, con un quinto frente de modelo de riesgos. La aprobación depende del alcance y costo que proponga; el 12 de octubre hay sesión para validarlo.", estado: "Por definir" }
-],
+decisiones: [],
+
+
 
 
 
 /* Alertas y riesgos. nivel: "alto" | "medio" */
 /* Vacío muestra en el tablero "No identificados por el momento" */
 alertas: [
-{ nivel: "alto", titulo: "Pruebas con CECOBAN detenidas por conectividad", detalle: "No se alcanza la IP del manual de pruebas; los puertos internos ya se abrieron y la incidencia está reportada con evidencia. CECOBAN canceló la sesión del 25 de septiembre porque otros bancos también reportaron fallas.", fuente: "Habilitadores, 24 sep 2026; Modelo Ordenante, 25 sep 2026" },
-{ nivel: "alto", titulo: "El core no administra la prelación", detalle: "El banco debe registrar y administrar la prelación que asigna CECOBAN, y hoy el core no tiene esa funcionalidad. Se calificó como uno de los puntos operativos y de control más relevantes.", fuente: "Modelo Ordenante, 25 sep 2026" },
-{ nivel: "medio", titulo: "Alcance de la consultoría por redefinir", detalle: "La primera propuesta dejaba la implementación del lado del banco. Se pidió a la firma devolver el alcance redefinido; la mesa avanza mientras tanto con sus capacidades actuales.", fuente: "Habilitadores, 24 sep 2026" }
+{ nivel: "alto", titulo: "Pruebas con CECOBAN detenidas por conectividad", detalle: "No se alcanza la IP del manual de pruebas; los puertos internos ya se abrieron y la incidencia está reportada con evidencia. Ya se identificó el problema: en la guía que compartió CECOBAN venía una IP incorrecta. El equipo de operaciones ya se comunicó con CECOBAN y se le está dando seguimiento.", fuente: "Habilitadores, 24 sep 2026" }
 ],
+
+
 
 
 
@@ -175,7 +174,6 @@ actividades: [
 /* ---- Mesa Ordenante ---- */
 { mesa: "ordenante", titulo: "Sesión de contexto: plan de auditoría regulatoria, matriz maestra de 18 puntos y cronograma propuesto", responsable: "Christian Carreón", fin: "2026-08-24", estado: "completado", fuente: "Contexto Modelo Ordenante, 24 ago 2026" },
 { mesa: "ordenante", titulo: "Definición de capacidades", responsable: "Christian Carreón", fin: "2026-09-09", estado: "completado", fuente: "Mesa de decisión, 9 sep 2026" },
-{ mesa: "ordenante", titulo: "Crear el grupo de chat de la mesa Ordenante para resolver temas sin convocar sesión", responsable: "Abigail Vásquez", fin: "2026-09-25", fuente: "Minuta Modelo Ordenante, 25 sep 2026" },
 { mesa: "ordenante", titulo: "Coordinar la sesión para generar las matrices de funcionalidades, necesidades y validaciones de cada etapa de los macroprocesos", responsable: "Isaí Juárez", fechaTexto: "ASAP", nota: "Con Berenice Serrano y Rodrigo De Marchena", fuente: "Minuta Modelo Ordenante, 25 sep 2026" },
 { mesa: "ordenante", titulo: "Designar a la persona del área que participará en las sesiones de detalle de definiciones", responsable: "Gabriela Hernández", fechaTexto: "Por definir", fuente: "Minuta Modelo Ordenante, 25 sep 2026" },
 { mesa: "ordenante", titulo: "Avisar a la mesa en qué momentos se podrán certificar los avances y buscar espacios de trabajo conjunto en las definiciones", responsable: "Isaí Juárez y Abigail Vásquez", estado: "continuo", fuente: "Minuta Modelo Ordenante, 25 sep 2026" },
@@ -188,7 +186,6 @@ actividades: [
 { mesa: "habilitadores", titulo: "Conexión de la banca al simulador de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-01", fin: "2026-09-18", estado: "completado", fuente: "Draft del timeline (actividad finalizada)" },
 { mesa: "habilitadores", titulo: "Subir la matriz de cumplimiento regulatorio a la carpeta compartida", responsable: "Edsel Martínez", fin: "2026-09-11", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Actualizar la matriz de pruebas con casos de rechazo y sus motivos, y ajustar los macroprocesos", responsable: "Isaí Juárez", fin: "2026-09-24", estado: "completado", fuente: "Minuta Habilitadores, 24 sep 2026" },
-{ mesa: "habilitadores", titulo: "Revisar, completar y entregar la matriz de pruebas", responsable: "Alejandra Muñoz y Mauricio Méndez", fin: "2026-09-25", estado: "completado", fuente: "Minuta Habilitadores, 24 sep 2026" },
 { mesa: "habilitadores", titulo: "Compartir la liga del tablero ejecutivo con el estatus de todas las mesas", responsable: "Abigail Vásquez", fin: "2026-09-28", estado: "completado", fuente: "Minuta Habilitadores, 24 sep 2026" },
 { mesa: "habilitadores", titulo: "Responder el comunicado de CECOBAN y solicitar un contacto que atienda la incidencia de conectividad", responsable: "Alejandra Muñoz", fin: "2026-09-29", estado: "completado", fuente: "Minuta Habilitadores, 24 sep 2026" },
 { mesa: "habilitadores", titulo: "Revisar con el proveedor del Core Bancario la cotización para la configuración de reserva de descuentos y aplicación de prelaciones sobre cuentas", responsable: "Miguel Matus", fechaTexto: "ASAP" },
@@ -205,7 +202,7 @@ actividades: [
 /* Definiciones pendientes que se muestran en la pestaña Actividades */
 definiciones: [
 { titulo: "Definir dónde se ejecutará el flujo de otorgamiento (¿nueva aplicación? ¿PUC?)", responsable: "Todas las mesas" },
-{ titulo: "Definir si la administración de la prelación se resuelve en el core bancario o con un desarrollo externo que después se conecte", responsable: "Miguel Matus" }
+{ titulo: "Definir si la administración de la prelación se resuelve en el core bancario o con un desarrollo externo que después se conecte", responsable: "Juan Ramón Becerra" }
 ],
 
 /* Draft de la EDT de construcción del sistema */
@@ -241,14 +238,13 @@ habilitadores: [
 "La ventana de pruebas exige reportar incidencias antes de cada jueves, con sesión con CECOBAN los viernes; esas sesiones aún no se realizan.",
 "La matriz de pruebas cubre consulta y regreso de capacidad, confirmación del otorgamiento, regreso de la prelación y conciliación, e incluye los casos de rechazo y sus motivos. Es una primera versión: en abril se entrega una más amplia, trabajada con los bancos en la ABM.",
 "El proceso del CAN debe contemplar la consulta al buró por otros créditos del cliente, no vinculados a su cuenta de nómina, y el reporte de la información de los clientes al buró.",
-"Se generó y envió el NDA a la consultora, necesario para compartir la información sensible con la que cerrará su cotización; el proceso tomó dos semanas. Al alcance solicitado se sumó un quinto frente: un modelo de riesgos.",
+"Se generó y envió el NDA a la consultora, necesario para compartir la información sensible con la que cerrará su cotización; el proceso tomó dos semanas.",
 "Tras presentar el planteamiento a la dirección ejecutiva se determinó que se requiere una consultoría que acompañe todo el proyecto, no solo las definiciones documentadas. La mesa seguirá avanzando con sus capacidades actuales para cumplir los tiempos del gremio y de CECOBAN."
 ],
 ordenante: [
 "Se presentó el macroproceso otorgante por etapas con los habilitadores de cada una: precalificación, originación, dispersión, prelación, cobro (C70, C72 y C71), conciliación y mantenimiento (C58). Contempla créditos sobre cuentas propias y sobre cuentas en otros bancos ordenantes.",
 "Como banco ordenante, Consubanco responderá consultas de capacidad (C51), registrará los créditos y las prelaciones que informen otros bancos (C53), procesará instrucciones de cobro validando cuenta, saldo y prelación, y conciliará confirmaciones y devoluciones. Ya hay matrices de prueba para todos los escenarios.",
 "Se distinguieron dos entregables que no deben confundirse: la guía de conexiones de las pruebas técnicas con CECOBAN y la matriz de pruebas que pidió la ABM, que quedó lista y se envió el 25 de septiembre.",
-"CECOBAN informó que revisa la incidencia y canceló la sesión del 25 de septiembre porque otros bancos también reportaron fallas de conexión; avisará cuando los sistemas estén más estables.",
 "CECOBAN asigna la prelación y el banco debe registrarla y administrarla en su core, funcionalidad que hoy no existe. El tema está en análisis técnico con el proveedor y se sugirió representarlo de forma explícita como habilitador del programa.",
 "Auditoría trabajará en dos frentes: coordinar con Legal las definiciones normativas pendientes e ir certificando lo que se construya conforme el equipo avise."
 ]
@@ -261,13 +257,11 @@ acuerdos: [
 "La mesa Ordenante tendrá un grupo de chat para resolver temas sin convocar sesión, como el que ya opera en Habilitadores."
 ],
 alertas: [
-"Las pruebas técnicas están detenidas y la sesión del 25 de septiembre no se realizó: sería la segunda semana de la ventana de pruebas sin sesión con CECOBAN.",
-"El core no administra la prelación; falta confirmar si lo resuelve el proveedor o si se requiere un desarrollo externo que después se conecte.",
-"La aprobación de la consultoría depende del alcance y el costo que proponga la firma."
+"Las pruebas con el simulador están detenidas.",
+"El core no administra la prelación; falta confirmar si lo resuelve el proveedor o si se requiere un desarrollo externo que después se conecte."
 ],
 siguientes: [
 "Retomar las pruebas técnicas en cuanto CECOBAN confirme que sus sistemas están estables.",
-"Definir con el proveedor del core si la prelación se resuelve ahí o con un desarrollo externo.",
 "Recibir de la consultora el alcance redefinido para saber hasta dónde participará en las definiciones que hoy trabaja el equipo.",
 "Generar las matrices de funcionalidades, necesidades y validaciones de cada etapa de los macroprocesos."
 ],
