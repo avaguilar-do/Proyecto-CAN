@@ -13,7 +13,7 @@ Fuentes: presentaciones y minutas del Programa CAN del 24-ago al
 ========================================================================== */
 window.CAN_DATA = {
 /* Fecha de corte de la información mostrada */
-corte: "2026-09-25",
+corte: "2026-10-02",
 
 programa: {
 nombre: "Programa CAN",
@@ -141,7 +141,7 @@ decisiones: [],
 /* Alertas y riesgos. nivel: "alto" | "medio" */
 /* Vacío muestra en el tablero "No identificados por el momento" */
 alertas: [
-{ nivel: "alto", titulo: "Pruebas con CECOBAN detenidas por conectividad", detalle: "No se alcanza la IP del manual de pruebas; los puertos internos ya se abrieron y la incidencia está reportada con evidencia. Ya se identificó el problema: en la guía que compartió CECOBAN venía una IP incorrecta. El equipo de operaciones ya se comunicó con CECOBAN y se le está dando seguimiento.", fuente: "Habilitadores, 24 sep 2026" }
+{ nivel: "medio", titulo: "Pruebas con CECOBAN en curso, con un hallazgo en revisión", detalle: "El problema de conectividad se resolvió el 30 de septiembre: la guía que envió CECOBAN tenía errores y fue corregida. Con la guía corregida el equipo técnico ejecutó las pruebas y todas resultaron satisfactorias, salvo un hallazgo de incidencia en una conexión. Las evidencias y el hallazgo se enviaron a CECOBAN el 1 de octubre y se espera su respuesta. La ventana de pruebas cierra el 16 de octubre.", fuente: "Habilitadores, 1 oct 2026" }
 ],
 
 
@@ -164,7 +164,7 @@ actividades: [
 { mesa: "otorgante", titulo: "Propuesta de capacidad de pago y score de riesgo (conceptualmente correcta, sujeta a ajustes)", responsable: "Linda Romero", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", ref: "MO-01", titulo: "Compartir con el equipo la presentación de producto expuesta en la sesión", responsable: "Diana Angeles", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", ref: "MO-02", titulo: "Compartir la presentación de la propuesta de capacidad de pago y score de riesgo", responsable: "Linda Romero", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
-{ mesa: "otorgante", titulo: "Sesión con el Director de Riesgos para revisar la propuesta de capacidad de pago y sus ajustes", responsable: "Abigail Vásquez", fin: "2026-10-02", nota: "Sesión programada para el 2 de octubre", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
+{ mesa: "otorgante", titulo: "Sesión con el Director de Riesgos para revisar la propuesta de capacidad de pago y sus ajustes", responsable: "Abigail Vásquez", fin: "2026-10-02", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 { mesa: "otorgante", ref: "MO-04", titulo: "Confirmar con CECOBAN qué incluye la variable “disponible” (variable inicial y ajustes)", responsable: "Nelly Trejo y equipo", fin: "2026-09-15", estado: "completado", fuente: "Minuta Mesa Otorgante, 15 sep 2026" },
 
 /* ---- Mesa Ordenante ---- */
@@ -183,10 +183,10 @@ actividades: [
 { mesa: "habilitadores", titulo: "Actualizar la matriz de pruebas con casos de rechazo y sus motivos, y ajustar los macroprocesos", responsable: "Isaí Juárez", fin: "2026-09-24", estado: "completado", fuente: "Minuta Habilitadores, 24 sep 2026" },
 { mesa: "habilitadores", titulo: "Compartir la liga del tablero ejecutivo con el estatus de todas las mesas", responsable: "Abigail Vásquez", fin: "2026-09-28", estado: "completado", fuente: "Minuta Habilitadores, 24 sep 2026" },
 { mesa: "habilitadores", titulo: "Responder el comunicado de CECOBAN y solicitar un contacto que atienda la incidencia de conectividad", responsable: "Alejandra Muñoz", fin: "2026-09-29", estado: "completado", fuente: "Minuta Habilitadores, 24 sep 2026" },
-{ mesa: "habilitadores", titulo: "Revisar con el proveedor del Core Bancario la cotización para la configuración de reserva de descuentos y aplicación de prelaciones sobre cuentas", responsable: "Miguel Matus", fechaTexto: "ASAP" },
+{ mesa: "habilitadores", titulo: "Revisar con el proveedor del Core Bancario la cotización para la configuración de reserva de descuentos y aplicación de prelaciones sobre cuentas", responsable: "Miguel Matus, Esperanza Hernández y Juan Ramón Becerra", fechaTexto: "Por definir", nota: "Sin fecha compromiso: primero se revisa con el equipo y con el proveedor", fuente: "Minuta Habilitadores, 1 oct 2026" },
 { mesa: "habilitadores", titulo: "Recibir la cotización del consultor externo", responsable: "Rosaura Flores y Sergio Olivero", fin: "2026-10-12", nota: "El 12 de octubre se tendrá sesión con Akya para validar el alcance de la propuesta", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Generar la matriz de pruebas de los módulos de conexión con CECOBAN", responsable: "Isaí Juárez, Mauricio Méndez, Alejandra Muñoz y Nelly Trejo", fin: "2026-09-25", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
-{ mesa: "habilitadores", titulo: "Periodo de pruebas con el simulador API de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-14", fin: "2026-10-16", nota: "Detenidas: no se logra conexión con el sitio de CECOBAN; la incidencia está reportada", fuente: "Roadmap CECOBAN" },
+{ mesa: "habilitadores", titulo: "Periodo de pruebas con el simulador API de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-14", fin: "2026-10-16", nota: "Conexión restablecida el 30 de septiembre; pruebas ejecutadas con un hallazgo enviado a CECOBAN el 1 de octubre", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "CECOBAN informa el esquema de recuperación de gastos", responsable: "TBD", fin: "2026-10-16", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "Entrega de la carta vinculante a CECOBAN", responsable: "Gabriela Hernández (Legal)", inicio: "2026-10-19", fin: "2026-10-23", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "Entrega del contrato marco", responsable: "Gabriela Hernández (Legal)", fin: "2026-10-28", fuente: "Roadmap CECOBAN" },
@@ -219,6 +219,48 @@ edt: [
 
 /* Resumen semanal. Agrega una semana nueva al inicio del arreglo. */
 semanas: [
+{
+inicio: "2026-09-28",
+fin: "2026-10-02",
+titular: "Se restableció la conexión con CECOBAN y las pruebas resultaron satisfactorias salvo un hallazgo; la revisión del cronograma confirmó que no hay actividades en retraso.",
+sesiones: [{ mesa: "habilitadores", fecha: "2026-10-01", nombre: "Seguimiento Habilitadores" }],
+puntos: {
+habilitadores: [
+"El problema de conectividad se resolvió el 30 de septiembre: la guía que había enviado CECOBAN contenía errores y fue corregida. Con la guía corregida el equipo técnico ejecutó las pruebas y todas resultaron satisfactorias, salvo un hallazgo de incidencia en una conexión. Las evidencias y el hallazgo se enviaron a CECOBAN el 1 de octubre y se espera su respuesta.",
+"Los hallazgos deben informarse antes de cada jueves para que CECOBAN regrese una confirmación. La ventana de pruebas cierra el 16 de octubre, por lo que se pidió dar seguimiento para no llegar con el tiempo justo.",
+"Revisión del cronograma: modelo de negocio en ejecución con ajustes a los productos; certificación otorgante y ordenante en curso de forma continua, con Auditoría Interna participando en las sesiones para tener contexto; macroprocesos otorgante y ordenante ya elaborados, pendientes de desglosarse en actividades; gap assessment avanzando en línea con el proyecto; conexión al simulador y matriz de pruebas concluidas. Se confirmó que no hay actividades en retraso.",
+"Conforme al timeline de CECOBAN, la construcción del sistema debía iniciar el 1 de octubre a cargo del equipo de Tecnología. El siguiente paso relevante es bajar los macroprocesos a definiciones puntuales de los requerimientos que deberá preparar Tecnología.",
+"La carta vinculante sigue programada para el 19 de octubre y está a la espera de la información de CECOBAN.",
+"Se recorrió el tablero de seguimiento y se pidió al equipo enviar observaciones sobre las minutas, ya que alimentan el resumen semanal. Atendiendo una retroalimentación previa, el mecanismo de prelación ya se agregó a la mesa de Habilitadores, dado que no figuraba en ninguna mesa.",
+"Grupos de trabajo de la ABM: no ha habido mesas recientes. En el grupo de Domican, Consubanco se manifestó a favor de que la cancelación de la domiciliación del CAN se realice solo en el banco otorgante y no en el ordenante, y planteó mantener un único formato de domiciliación para no tener que localizar al cliente en otros bancos cuando cambie de institución. Se pidió confirmar la fecha que dio Banxico para recibir a ambos grupos de trabajo; aún no hay respuesta.",
+"Auditoría Interna propuso revisar de forma parcial cada entregable conforme se concluya, en lugar de esperar al final, y documentar cada revisión en el informe de auditoría que se elaborará a lo largo del proyecto. Las revisiones iniciarán cuando el equipo dé luz verde."
+],
+otorgante: [
+"La sesión con el Director de Riesgos para revisar la propuesta de capacidad de pago y sus ajustes se llevó a cabo el 2 de octubre.",
+"El líder de la mesa y producto revisaron las características del producto; el tema no está cerrado y se espera mayor claridad en la semana del 12 de octubre. La mesa de Habilitadores depende de esa definición para elaborar la matriz técnica de características con la que se configurará el producto en el core bancario.",
+"Mientras la definición se cierra, se continuará con lo que solicita CECOBAN, con los habilitadores del lado otorgante y con el desglose detallado de actividades. Se solicitó una sesión con Inés, con fechas disponibles en la semana del 19 de octubre."
+]
+},
+acuerdos: [
+"Todo el equipo revisará el tablero de seguimiento y enviará dudas o comentarios, además de comunicar cualquier observación o desacuerdo sobre las minutas, ya que alimentan el resumen semanal del tablero.",
+"Miguel Matus, con Esperanza Hernández y Juan Ramón Becerra, revisará con el proveedor del core bancario la cotización para la configuración de reserva de descuentos y la aplicación de prelación sobre las cuentas. Queda sin fecha compromiso: primero se revisa con el equipo y con el proveedor.",
+"Auditoría Interna revisará parcialmente cada entregable conforme se concluya, documentando cada revisión en el informe de auditoría."
+],
+alertas: [
+"La ventana de pruebas cierra el 16 de octubre y el hallazgo enviado el 1 de octubre sigue a la espera de respuesta de CECOBAN.",
+"La definición de producto no está cerrada y de ella depende la matriz técnica de características para configurar el producto en el core.",
+"La carta vinculante del 19 de octubre depende de información que aún no envía CECOBAN.",
+"Sin respuesta de la ABM sobre las siguientes mesas de trabajo ni sobre la fecha que dio Banxico para recibir a los grupos de domiciliación."
+],
+siguientes: [
+"Dar seguimiento al hallazgo con CECOBAN, informando antes de cada jueves, para cerrar las pruebas antes del 16 de octubre.",
+"Compartir la carta vinculante con Leonor Arias y su equipo una vez que CECOBAN envíe la información (Alejandra Muñoz).",
+"Bajar los macroprocesos a definiciones puntuales de los requerimientos que deberá preparar Tecnología.",
+"Cerrar el alcance de la propuesta con la consultora en la sesión del 12 de octubre para recibir la cotización.",
+"Agendar la sesión con Inés para la mesa Otorgante en la semana del 19 de octubre."
+],
+fuentes: ["Seguimiento Habilitadores, 1 oct 2026"]
+},
 {
 inicio: "2026-09-21",
 fin: "2026-09-25",
@@ -640,3 +682,4 @@ items: ["Especificaciones técnicas CAN v1.2", "Guía de conexión al simulador 
 }
 ]
 };
+
