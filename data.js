@@ -141,7 +141,7 @@ decisiones: [],
 /* Alertas y riesgos. nivel: "alto" | "medio" */
 /* Vacío muestra en el tablero "No identificados por el momento" */
 alertas: [
-{ nivel: "medio", titulo: "Pruebas con CECOBAN en curso, con un hallazgo en revisión", detalle: "El problema de conectividad se resolvió el 30 de septiembre: la guía que envió CECOBAN tenía errores y fue corregida. Con la guía corregida el equipo técnico ejecutó las pruebas y todas resultaron satisfactorias, salvo un hallazgo de incidencia en una conexión. Las evidencias y el hallazgo se enviaron a CECOBAN el 1 de octubre y se espera su respuesta. La ventana de pruebas cierra el 16 de octubre.", fuente: "Habilitadores, 1 oct 2026" }
+{ nivel: "medio", titulo: "Pruebas con CECOBAN en curso, con un hallazgo en revisión", detalle: "El problema de conectividad se resolvió el 30 de septiembre: la guía que envió CECOBAN tenía errores y fue corregida. Con la guía corregida el equipo técnico ejecutó las pruebas y todas resultaron satisfactorias, salvo un hallazgo de incidencia en una conexión. Las evidencias y el hallazgo se enviaron a CECOBAN el 1 de octubre y el 9 de octubre se tuvo una sesión con CECOBAN para revisar las observaciones. La ventana de pruebas cierra el 16 de octubre.", fuente: "Habilitadores, 1 oct 2026" }
 ],
 
 
@@ -228,7 +228,7 @@ puntos: {
 habilitadores: [
 "El problema de conectividad se resolvió el 30 de septiembre: la guía que había enviado CECOBAN contenía errores y fue corregida. Con la guía corregida el equipo técnico ejecutó las pruebas y todas resultaron satisfactorias, salvo un hallazgo de incidencia en una conexión. Las evidencias y el hallazgo se enviaron a CECOBAN el 1 de octubre y se espera su respuesta.",
 "Los hallazgos deben informarse antes de cada jueves para que CECOBAN regrese una confirmación. La ventana de pruebas cierra el 16 de octubre, por lo que se pidió dar seguimiento para no llegar con el tiempo justo.",
-"Revisión del cronograma: modelo de negocio en ejecución con ajustes a los productos; certificación otorgante y ordenante en curso de forma continua, con Auditoría Interna participando en las sesiones para tener contexto; macroprocesos otorgante y ordenante ya elaborados, pendientes de desglosarse en actividades; gap assessment avanzando en línea con el proyecto; conexión al simulador y matriz de pruebas concluidas. Se confirmó que no hay actividades en retraso.",
+"Revisión del cronograma: modelo de negocio en ejecución con ajustes a los productos; certificación otorgante y ordenante en curso de forma continua, con Auditoría Interna participando en las sesiones para tener contexto; macroprocesos otorgante y ordenante ya elaborados, pendientes de desglosarse en actividades; conexión al simulador y matriz de pruebas concluidas. Se confirmó que no hay actividades en retraso.",
 "Conforme al timeline de CECOBAN, la construcción del sistema debía iniciar el 1 de octubre a cargo del equipo de Tecnología. El siguiente paso relevante es bajar los macroprocesos a definiciones puntuales de los requerimientos que deberá preparar Tecnología.",
 "La carta vinculante sigue programada para el 19 de octubre y está a la espera de la información de CECOBAN.",
 "Se recorrió el tablero de seguimiento y se pidió al equipo enviar observaciones sobre las minutas, ya que alimentan el resumen semanal. Atendiendo una retroalimentación previa, el mecanismo de prelación ya se agregó a la mesa de Habilitadores, dado que no figuraba en ninguna mesa.",
@@ -249,8 +249,7 @@ acuerdos: [
 alertas: [
 "La ventana de pruebas cierra el 16 de octubre y el hallazgo enviado el 1 de octubre sigue a la espera de respuesta de CECOBAN.",
 "La definición de producto no está cerrada y de ella depende la matriz técnica de características para configurar el producto en el core.",
-"La carta vinculante del 19 de octubre depende de información que aún no envía CECOBAN.",
-"Sin respuesta de la ABM sobre las siguientes mesas de trabajo ni sobre la fecha que dio Banxico para recibir a los grupos de domiciliación."
+"La carta vinculante del 19 de octubre depende de información que aún no envía CECOBAN."
 ],
 siguientes: [
 "Dar seguimiento al hallazgo con CECOBAN, informando antes de cada jueves, para cerrar las pruebas antes del 16 de octubre.",
