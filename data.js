@@ -13,7 +13,7 @@ Fuentes: presentaciones y minutas del Programa CAN del 24-ago al
 ========================================================================== */
 window.CAN_DATA = {
 /* Fecha de corte de la información mostrada */
-corte: "2026-10-02",
+corte: "2026-10-16",
 
 programa: {
 nombre: "Programa CAN",
@@ -141,8 +141,14 @@ decisiones: [],
 /* Alertas y riesgos. nivel: "alto" | "medio" */
 /* Vacío muestra en el tablero "No identificados por el momento" */
 alertas: [
-{ nivel: "medio", titulo: "Pruebas con CECOBAN en curso, con un hallazgo en revisión", detalle: "El problema de conectividad se resolvió el 30 de septiembre: la guía que envió CECOBAN tenía errores y fue corregida. Con la guía corregida el equipo técnico ejecutó las pruebas y todas resultaron satisfactorias, salvo un hallazgo de incidencia en una conexión. Las evidencias y el hallazgo se enviaron a CECOBAN el 1 de octubre y el 9 de octubre se tuvo una sesión con CECOBAN para revisar las observaciones. La ventana de pruebas cierra el 16 de octubre.", fuente: "Habilitadores, 1 oct 2026" }
+{ nivel: "alto", titulo: "Última semana de pruebas con el simulador CAN", detalle: "CECOBAN amplió una semana el periodo de pruebas, del 19 al 23 de octubre, para los bancos que aún no logran conectarse o están enviando mensajes, y confirmó que después de esa semana no podrá ampliarlo de nuevo porque no puede mover las fechas del plan de trabajo compartido a la banca. El banco ya ejecutó sus pruebas y envió las evidencias; sigue sin recibir respuesta de CECOBAN.", fuente: "Comunicado CECOBAN; Habilitadores, 15 oct 2026" },
+{ nivel: "alto", titulo: "Entregables de CECOBAN con atraso", detalle: "CECOBAN no ha informado el esquema de recuperación de gastos, cuyo vencimiento era el 16 de octubre, ni ha entregado la carta vinculante para revisión del área legal, que está en disposición de validarla. Se dejó constancia de que estos atrasos son atribuibles a CECOBAN y no al banco.", fuente: "Habilitadores, 15 oct 2026" },
+{ nivel: "alto", titulo: "Las definiciones de flujo frenan la estimación de Tecnología", detalle: "Falta definir el flujo de otorgamiento completo y sus reglas, considerando el modelo integral: otorgamiento de crédito, administración o generación de la cuenta otorgante y el ecosistema de transferencia de archivos con CECOBAN. Sin eso, Tecnología no puede estimar el esfuerzo ni determinar si se requieren recursos internos o externos.", fuente: "Habilitadores, 15 oct 2026" },
+{ nivel: "medio", titulo: "El alcance de la consultoría no cubre el diseño del flujo", detalle: "Operaciones entendía que la consultoría cubriría, además de la documentación, el diseño completo del flujo y posiblemente la implementación. La PMO precisó que el alcance solicitado por esta mesa se limitaba a manuales y documentación. Está pendiente una nueva actualización de la propuesta.", fuente: "Habilitadores, 15 oct 2026" },
+{ nivel: "medio", titulo: "Varios bancos no saldrán en las fechas del plan", detalle: "En la mesa gremial del CAN varios bancos expusieron su experiencia ante CECOBAN y anunciaron que no podrán salir en las fechas previstas. La ABM pidió a cada banco una estimación del tiempo que le llevaría la implementación.", fuente: "Habilitadores, 15 oct 2026" }
 ],
+
+
 
 
 
@@ -184,11 +190,17 @@ actividades: [
 { mesa: "habilitadores", titulo: "Compartir la liga del tablero ejecutivo con el estatus de todas las mesas", responsable: "Abigail Vásquez", fin: "2026-09-28", estado: "completado", fuente: "Minuta Habilitadores, 24 sep 2026" },
 { mesa: "habilitadores", titulo: "Responder el comunicado de CECOBAN y solicitar un contacto que atienda la incidencia de conectividad", responsable: "Alejandra Muñoz", fin: "2026-09-29", estado: "completado", fuente: "Minuta Habilitadores, 24 sep 2026" },
 { mesa: "habilitadores", titulo: "Revisar con el proveedor del Core Bancario la cotización para la configuración de reserva de descuentos y aplicación de prelaciones sobre cuentas", responsable: "Miguel Matus, Esperanza Hernández y Juan Ramón Becerra", fechaTexto: "Por definir", nota: "Sin fecha compromiso: primero se revisa con el equipo y con el proveedor", fuente: "Minuta Habilitadores, 1 oct 2026" },
-{ mesa: "habilitadores", titulo: "Recibir la cotización del consultor externo", responsable: "Rosaura Flores y Sergio Olivero", fin: "2026-10-16", nota: "La sesión con el consultor se llevó a cabo el 12 de octubre; con los ajustes al alcance, el consultor enviará la información el 16 de octubre", fuente: "Minuta Habilitadores, 10 sep 2026" },
+{ mesa: "habilitadores", titulo: "Compartir a la mesa la versión actualizada del alcance enviada por la consultora", responsable: "Abigail Vásquez", fin: "2026-10-15", estado: "completado", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Dar seguimiento con CECOBAN a la retroalimentación de las evidencias, revisar la fecha de cierre de la ventana de pruebas y externar que el retraso no es atribuible al banco", responsable: "Nelly Trejo y Alejandra Muñoz", fin: "2026-10-16", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Revisar y validar el alcance de la consultora, rolarlo al interior con todos los equipos y enviar comentarios para que lo actualice", responsable: "Nelly Trejo y equipo", fin: "2026-10-19", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Enviar correo formal a la ABM, con copia a CECOBAN, solicitando que se confirmen oficialmente las fechas de las actividades próximas a vencer que dependen de CECOBAN", responsable: "Nelly Trejo", fin: "2026-10-19", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Entregar el plan con las fechas en que se concluirán las definiciones de los componentes a habilitar, mapeado contra el inventario de componentes", responsable: "Edsel Martínez e Isaí Juárez", fin: "2026-10-21", nota: "Permitirá a Tecnología determinar si se requieren recursos internos o externos", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Revisar entre todas las mesas el alcance de la consultora y validarlo", responsable: "Todas las mesas", fin: "2026-10-22", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Recibir la cotización del consultor externo", responsable: "Rosaura Flores y Sergio Olivero", fin: "2026-10-19", nota: "La consultora envió una actualización del alcance el 15 de octubre, que ya incorpora el acompañamiento en la generación de manuales; se espera una actualización más junto con la cotización", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Generar la matriz de pruebas de los módulos de conexión con CECOBAN", responsable: "Isaí Juárez, Mauricio Méndez, Alejandra Muñoz y Nelly Trejo", fin: "2026-09-25", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
-{ mesa: "habilitadores", titulo: "Periodo de pruebas con el simulador API de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-14", fin: "2026-10-16", nota: "Conexión restablecida el 30 de septiembre; pruebas ejecutadas con un hallazgo enviado a CECOBAN el 1 de octubre", fuente: "Roadmap CECOBAN" },
-{ mesa: "habilitadores", titulo: "CECOBAN informa el esquema de recuperación de gastos", responsable: "TBD", fin: "2026-10-16", fuente: "Roadmap CECOBAN" },
-{ mesa: "habilitadores", titulo: "Entrega de la carta vinculante a CECOBAN", responsable: "Gabriela Hernández (Legal)", inicio: "2026-10-19", fin: "2026-10-23", fuente: "Roadmap CECOBAN" },
+{ mesa: "habilitadores", titulo: "Periodo de pruebas con el simulador API de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-14", fin: "2026-10-23", nota: "CECOBAN amplió la ventana al 23 de octubre, sin posibilidad de otra prórroga. El banco ejecutó las pruebas y envió las evidencias; sigue sin respuesta", fuente: "Roadmap CECOBAN; comunicado CECOBAN" },
+{ mesa: "habilitadores", titulo: "CECOBAN informa el esquema de recuperación de gastos", responsable: "TBD", fin: "2026-10-16", nota: "Atraso atribuible a CECOBAN: no ha informado el esquema", fuente: "Roadmap CECOBAN" },
+{ mesa: "habilitadores", titulo: "Entrega de la carta vinculante a CECOBAN", responsable: "Gabriela Hernández (Legal)", inicio: "2026-10-19", fin: "2026-10-23", nota: "CECOBAN aún no entrega la carta para revisión del área legal, que está en disposición de validarla", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "Entrega del contrato marco", responsable: "Gabriela Hernández (Legal)", fin: "2026-10-28", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "Construcción del sistema", responsable: "Juan Ramón Becerra", inicio: "2026-10-01", fin: "2027-03-31", nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "habilitadores", titulo: "Compartir en la carpeta del programa toda la información que envíe la ABM", responsable: "Alejandra Muñoz", estado: "continuo", fuente: "Minuta Habilitadores, 10 sep 2026" }
@@ -197,7 +209,9 @@ actividades: [
 /* Definiciones pendientes que se muestran en la pestaña Actividades */
 definiciones: [
 { titulo: "Definir dónde se ejecutará el flujo de otorgamiento (¿nueva aplicación? ¿PUC?)", responsable: "Todas las mesas" },
-{ titulo: "Definir si la administración de la prelación se resuelve en el core bancario o con un desarrollo externo que después se conecte", responsable: "Juan Ramón Becerra" }
+{ titulo: "Definir si la administración de la prelación se resuelve en el core bancario o con un desarrollo externo que después se conecte", responsable: "Juan Ramón Becerra" },
+{ titulo: "Alcance definitivo de la consultoría: pendiente de comentarios de la mesa y de una nueva actualización de la consultora; el diseño del flujo completo no está incluido en la propuesta actual", responsable: "Todas las mesas" },
+{ titulo: "Recursos internos o externos para el desarrollo: Tecnología no puede definirlo hasta contar con las definiciones de flujos, procesos y reglas", responsable: "Juan Ramón Becerra" }
 ],
 
 /* Draft de la EDT de construcción del sistema */
@@ -219,6 +233,47 @@ edt: [
 
 /* Resumen semanal. Agrega una semana nueva al inicio del arreglo. */
 semanas: [
+{
+inicio: "2026-10-12",
+fin: "2026-10-16",
+titular: "La consultora actualizó su alcance e incorporó los manuales, pero el diseño del flujo quedó fuera; CECOBAN amplió una semana las pruebas y acumula entregables con atraso.",
+sesiones: [{ mesa: "habilitadores", fecha: "2026-10-15", nombre: "Seguimiento Habilitadores" }],
+puntos: {
+habilitadores: [
+"La consultora envió una actualización de su alcance que ya incorpora una de las solicitudes de la mesa: el acompañamiento en la generación de manuales. La propuesta contempla manuales de procedimiento para crédito, políticas y facultades; onboarding, KYC y PLD; originación y dispersión; cobro voluntario y cobranza; cargo a cuenta y conciliación; renovación con mejora; designación, mandato y prelación; cancelación y cambio de banco; transparencia (CAT, contratos y RECA); UNE, quejas y atención a adultos mayores; y reporteo regulatorio, aplicables a Cash Loan Express, anticipo de nómina, Cash Loan y F3 CAN. Incluye una secuencia de trabajo por fases y se espera todavía una actualización más.",
+"Operaciones señaló que entendía que la consultoría cubriría, además de la parte documental, el diseño completo del flujo y posiblemente la implementación. La PMO precisó que el alcance solicitado originalmente por esta mesa se limitaba a manuales y documentación, y que el diseño del flujo completo no está en la propuesta.",
+"Sobre el apoyo externo por mesa: la Ordenante manifestó que haría su parte internamente y Habilitadores planteaba un esquema híbrido; falta recuperar la postura de Juan Ramón Becerra y de la mesa Otorgante. Se propuso retomar el tema con todas las mesas tras el primer contacto con la consultora. Tecnología indicó que, con las definiciones pendientes, aún no puede evaluar el alcance y que probablemente se requerirá apoyo externo.",
+"Operaciones subrayó que la mesa está en un punto crucial: aunque se trabajan las primeras definiciones con la guía operativa de CECOBAN, falta definir el flujo de otorgamiento completo y sus reglas para que Tecnología pueda estimar, considerando el modelo integral de otorgamiento, la administración o generación de la cuenta otorgante y el ecosistema de transferencia de archivos con CECOBAN.",
+"Soluciones de negocio confirmó su apoyo: trabaja con Isaí Juárez en matrices del lado otorgante y de prelación, y en la documentación que debe recabarse al aperturar un contrato de CAN, incorporando las definiciones a nivel matriz y regulatorio para después presentarlas a cada área.",
+"Tecnología envió las evidencias a CECOBAN y monitorea el correo sin recibir respuesta; pidió apoyo para gestionar una llamada, ya que el tema se escaló sin solución. Operaciones consideró que la ventana de pruebas no tendría por qué cerrarse para el banco, dado que CECOBAN tuvo que reenviar la guía por inconsistencias en la primera versión y el atraso le corresponde a CECOBAN.",
+"Quedó pendiente del lado de CECOBAN informar el esquema de recuperación de gastos, con vencimiento el 16 de octubre, y entregar la carta vinculante para revisión del área legal. Se dejó constancia de que estos atrasos son atribuibles a CECOBAN.",
+"En la mesa gremial del CAN varios bancos expusieron su experiencia ante CECOBAN y anunciaron que no podrán salir en las fechas del plan. La ABM pidió a cada banco una estimación del tiempo que le llevaría la implementación."
+],
+otorgante: [
+"La PMO señaló como punto relevante para la próxima sesión definir con qué producto se iniciará y en qué aplicación se implementará el CAN, por ejemplo si será en la nueva aplicación de inversiones u otra; esta definición podría depender de la definición de producto. Planteó como posible estrategia iniciar con Habilitadores, después con Ordenante y al final con Otorgante, una vez definido el modelo de negocio."
+]
+},
+acuerdos: [
+"Se compartió a la mesa la versión actualizada del alcance enviada por la consultora.",
+"Nelly Trejo y su equipo revisarán y validarán el alcance de la consultora, incluida la propuesta de manuales, lo rolarán al interior con todos los equipos para asegurar que cubra todos los frentes documentales y enviarán comentarios para que la consultora lo actualice (19 de octubre). Todas las mesas lo revisarán y validarán el 22 de octubre.",
+"Edsel Martínez e Isaí Juárez entregarán el 21 de octubre el plan con las fechas en que se concluirán las definiciones de los componentes a habilitar, mapeado contra el inventario de componentes, para que Tecnología determine si se requieren recursos internos o externos.",
+"Nelly Trejo enviará correo formal a la ABM, con copia a CECOBAN, solicitando que se confirmen oficialmente las fechas de las actividades próximas a vencer que dependen de CECOBAN (19 de octubre).",
+"Soluciones de negocio entregará el 21 de octubre un plan con fechas para concluir las definiciones."
+],
+alertas: [
+"CECOBAN amplió el periodo de pruebas una semana más, del 19 al 23 de octubre, y confirmó que no podrá ampliarlo otra vez porque no puede mover las fechas del plan de trabajo compartido a la banca.",
+"El banco ejecutó las pruebas y envió las evidencias, pero sigue sin respuesta de CECOBAN pese a que el tema ya se escaló.",
+"El esquema de recuperación de gastos venció el 16 de octubre sin que CECOBAN lo informara, y la carta vinculante tampoco se ha entregado para revisión legal.",
+"Sin las definiciones de flujos, procesos y reglas, Tecnología no puede estimar el esfuerzo ni definir si se requieren recursos internos o externos."
+],
+siguientes: [
+"Cerrar el alcance definitivo de la consultoría con los comentarios de todas las mesas y la nueva actualización de la propuesta.",
+"Definir el flujo de otorgamiento completo y sus reglas para que Tecnología pueda estimar.",
+"Definir con la mesa Otorgante con qué producto se inicia y en qué aplicación se implementará el CAN.",
+"Gestionar una llamada con CECOBAN para destrabar la retroalimentación de las evidencias dentro de la última semana de pruebas."
+],
+fuentes: ["Seguimiento Habilitadores, 15 oct 2026", "Comunicado CECOBAN sobre la ampliación del periodo de pruebas"]
+},
 {
 inicio: "2026-09-28",
 fin: "2026-10-02",
@@ -681,5 +736,3 @@ items: ["Especificaciones técnicas CAN v1.2", "Guía de conexión al simulador 
 }
 ]
 };
-
-
