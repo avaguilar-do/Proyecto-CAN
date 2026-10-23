@@ -13,7 +13,7 @@ Fuentes: presentaciones y minutas del Programa CAN del 24-ago al
 ========================================================================== */
 window.CAN_DATA = {
 /* Fecha de corte de la información mostrada */
-corte: "2026-10-16",
+corte: "2026-10-22",
 
 programa: {
 nombre: "Programa CAN",
@@ -141,9 +141,10 @@ decisiones: [],
 /* Alertas y riesgos. nivel: "alto" | "medio" */
 /* Vacío muestra en el tablero "No identificados por el momento" */
 alertas: [
-{ nivel: "alto", titulo: "Última semana de pruebas con el simulador CAN", detalle: "CECOBAN amplió una semana el periodo de pruebas, del 19 al 23 de octubre, para los bancos que aún no logran conectarse o están enviando mensajes, y confirmó que después de esa semana no podrá ampliarlo de nuevo porque no puede mover las fechas del plan de trabajo compartido a la banca. El banco ya ejecutó sus pruebas y envió las evidencias; sigue sin recibir respuesta de CECOBAN.", fuente: "Comunicado CECOBAN; Habilitadores, 15 oct 2026" },
-{ nivel: "alto", titulo: "Entregables de CECOBAN con atraso", detalle: "CECOBAN no ha informado el esquema de recuperación de gastos, cuyo vencimiento era el 16 de octubre, ni ha entregado la carta vinculante para revisión del área legal, que está en disposición de validarla. Se dejó constancia de que estos atrasos son atribuibles a CECOBAN y no al banco.", fuente: "Habilitadores, 15 oct 2026" }
+{ nivel: "alto", titulo: "La ventana de pruebas cierra sin lograr la conexión con CECOBAN", detalle: "El periodo de pruebas termina el 23 de octubre y no se consigue la conexión ni siquiera con la respuesta previa de CECOBAN. Se reenviaron los correos solicitando retroalimentación, con el contacto de la ABM copiado, y no hay respuesta; se le llamará para que apoye a presionar a CECOBAN. Otros bancos tampoco han podido conectarse ni enviar los archivos JSON.", fuente: "Habilitadores, 22 oct 2026" }
 ],
+
+
 
 
 
@@ -188,16 +189,24 @@ actividades: [
 { mesa: "habilitadores", titulo: "Responder el comunicado de CECOBAN y solicitar un contacto que atienda la incidencia de conectividad", responsable: "Alejandra Muñoz", fin: "2026-09-29", estado: "completado", fuente: "Minuta Habilitadores, 24 sep 2026" },
 { mesa: "habilitadores", titulo: "Revisar con el proveedor del Core Bancario la cotización para la configuración de reserva de descuentos y aplicación de prelaciones sobre cuentas", responsable: "Miguel Matus, Esperanza Hernández y Juan Ramón Becerra", fechaTexto: "Por definir", nota: "Sin fecha compromiso: primero se revisa con el equipo y con el proveedor", fuente: "Minuta Habilitadores, 1 oct 2026" },
 { mesa: "habilitadores", titulo: "Compartir a la mesa la versión actualizada del alcance enviada por la consultora", responsable: "Abigail Vásquez", fin: "2026-10-15", estado: "completado", fuente: "Minuta Habilitadores, 15 oct 2026" },
-{ mesa: "habilitadores", titulo: "Dar seguimiento con CECOBAN a la retroalimentación de las evidencias, revisar la fecha de cierre de la ventana de pruebas y externar que el retraso no es atribuible al banco", responsable: "Nelly Trejo y Alejandra Muñoz", fin: "2026-10-19", fuente: "Minuta Habilitadores, 15 oct 2026" },
-{ mesa: "habilitadores", titulo: "Revisar y validar el alcance de la consultora, rolarlo al interior con todos los equipos y enviar comentarios para que lo actualice", responsable: "Nelly Trejo y equipo", fin: "2026-10-19", fuente: "Minuta Habilitadores, 15 oct 2026" },
-{ mesa: "habilitadores", titulo: "Enviar correo formal a la ABM, con copia a CECOBAN, solicitando que se confirmen oficialmente las fechas de las actividades próximas a vencer que dependen de CECOBAN", responsable: "Nelly Trejo", fin: "2026-10-19", fuente: "Minuta Habilitadores, 15 oct 2026" },
-{ mesa: "habilitadores", titulo: "Entregar el plan con las fechas en que se concluirán las definiciones de los componentes a habilitar, mapeado contra el inventario de componentes", responsable: "Edsel Martínez e Isaí Juárez", fin: "2026-10-21", nota: "Permitirá a Tecnología determinar si se requieren recursos internos o externos", fuente: "Minuta Habilitadores, 15 oct 2026" },
-{ mesa: "habilitadores", titulo: "Revisar entre todas las mesas el alcance de la consultora y validarlo", responsable: "Todas las mesas", fin: "2026-10-22", fuente: "Minuta Habilitadores, 15 oct 2026" },
-{ mesa: "habilitadores", titulo: "Recibir la cotización del consultor externo", responsable: "Rosaura Flores y Sergio Olivero", fin: "2026-10-19", nota: "La consultora envió una actualización del alcance el 15 de octubre, que ya incorpora el acompañamiento en la generación de manuales; se espera una actualización más junto con la cotización", fuente: "Minuta Habilitadores, 10 sep 2026" },
+{ mesa: "habilitadores", titulo: "Dar seguimiento con CECOBAN a la retroalimentación de las evidencias, revisar la fecha de cierre de la ventana de pruebas y externar que el retraso no es atribuible al banco", responsable: "Nelly Trejo y Alejandra Muñoz", fin: "2026-10-19", estado: "completado", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Revisar y validar el alcance de la consultora, rolarlo al interior con todos los equipos y enviar comentarios para que lo actualice", responsable: "Nelly Trejo y equipo", fin: "2026-10-19", estado: "completado", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Enviar correo formal a la ABM, con copia a CECOBAN, solicitando que se confirmen oficialmente las fechas de las actividades próximas a vencer que dependen de CECOBAN", responsable: "Nelly Trejo", fin: "2026-10-19", estado: "completado", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Entregar el plan con las fechas en que se concluirán las definiciones de los componentes a habilitar, mapeado contra el inventario de componentes", responsable: "Edsel Martínez e Isaí Juárez", fin: "2026-10-21", nota: "Permitirá a Tecnología determinar si se requieren recursos internos o externos", estado: "completado", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Revisar entre todas las mesas el alcance de la consultora y validarlo", responsable: "Todas las mesas", fin: "2026-10-26", nota: "Reprogramada: se revisará en el foro del 26 de octubre", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Recibir la cotización del consultor externo", responsable: "Rosaura Flores y Sergio Olivero", fin: "2026-10-19", nota: "La consultora envió una actualización del alcance el 15 de octubre, que ya incorpora el acompañamiento en la generación de manuales; se espera una actualización más junto con la cotización", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Generar la matriz de pruebas de los módulos de conexión con CECOBAN", responsable: "Isaí Juárez, Mauricio Méndez, Alejandra Muñoz y Nelly Trejo", fin: "2026-09-25", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
-{ mesa: "habilitadores", titulo: "Periodo de pruebas con el simulador API de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-14", fin: "2026-10-23", nota: "CECOBAN amplió la ventana al 23 de octubre, sin posibilidad de otra prórroga. El banco ejecutó las pruebas y envió las evidencias; sigue sin respuesta", fuente: "Roadmap CECOBAN; comunicado CECOBAN" },
-{ mesa: "habilitadores", titulo: "CECOBAN informa el esquema de recuperación de gastos", responsable: "TBD", fin: "2026-10-16", nota: "Atraso atribuible a CECOBAN: no ha informado el esquema", fuente: "Roadmap CECOBAN" },
-{ mesa: "habilitadores", titulo: "Entrega de la carta vinculante a CECOBAN", responsable: "Gabriela Hernández (Legal)", inicio: "2026-10-19", fin: "2026-10-23", nota: "CECOBAN aún no entrega la carta para revisión del área legal, que está en disposición de validarla", fuente: "Roadmap CECOBAN" },
+{ mesa: "habilitadores", titulo: "Volver a compartir el documento de definiciones actualizado con los comentarios de la sesión y validarlo con Operaciones", responsable: "Isaí Juárez", fin: "2026-10-22", estado: "completado", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Llamar al contacto de la ABM para que apoye a presionar a CECOBAN sobre las evidencias y el cierre de la ventana de pruebas", responsable: "Alejandra Muñoz", fin: "2026-10-22", estado: "completado", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Entregar a Tecnología el paquete de definiciones para que dimensione los recursos y componentes del CAN", responsable: "Isaí Juárez", fin: "2026-10-23", nota: "Primer entregable para el levantamiento de necesidades técnicas", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Compartir el tabulador aproximado del costo mensual de los recursos que requiere Operación", responsable: "Alejandra Muñoz", fin: "2026-10-23", nota: "Para integrarlo a los costos totales del proyecto", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Presentar en el foro con el líder de la mesa Otorgante la valoración de la propuesta de la consultora, explorar otras estrategias y mostrar el compilado de costos conocidos", responsable: "Abigail Vásquez", fin: "2026-10-26", nota: "Incluye los costos que informó CECOBAN", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Promover en la mesa Otorgante las definiciones de prospección, tableros e interacciones de datos que requiere Data Hub", responsable: "Abigail Vásquez", fin: "2026-10-26", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Evaluar si el desarrollo puede realizarse con equipo externo, con involucramiento del equipo interno de Tecnología, y proponer la mejor alternativa", responsable: "Juan Ramón Becerra", fechaTexto: "Al entregarse el SOW", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Entregar la estimación del bloque de proyectos 2027, que incluye el desarrollo de prelación en el core", responsable: "Juan Ramón Becerra", inicio: "2026-10-26", fin: "2026-10-30", nota: "Necesaria para el presupuesto del siguiente año", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Periodo de pruebas con el simulador API de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-14", fin: "2026-10-23", nota: "La ventana cierra el 23 de octubre sin posibilidad de otra prórroga. No se logra la conexión y los correos con evidencias siguen sin respuesta", fuente: "Roadmap CECOBAN; comunicado CECOBAN" },
+{ mesa: "habilitadores", titulo: "CECOBAN informa el esquema de recuperación de gastos", responsable: "TBD", fin: "2026-10-16", estado: "completado", nota: "CECOBAN informó el esquema y la información se compartió al equipo", fuente: "Roadmap CECOBAN" },
+{ mesa: "habilitadores", titulo: "Entrega de la carta vinculante a CECOBAN", responsable: "Gabriela Hernández (Legal)", inicio: "2026-10-19", fin: "2026-10-23", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "Entrega del contrato marco", responsable: "Gabriela Hernández (Legal)", fin: "2026-10-28", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "Construcción del sistema", responsable: "Juan Ramón Becerra", inicio: "2026-10-01", fin: "2027-03-31", nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "habilitadores", titulo: "Compartir en la carpeta del programa toda la información que envíe la ABM", responsable: "Alejandra Muñoz", estado: "continuo", fuente: "Minuta Habilitadores, 10 sep 2026" }
@@ -205,11 +214,15 @@ actividades: [
 
 /* Definiciones pendientes que se muestran en la pestaña Actividades */
 definiciones: [
-{ titulo: "Definir dónde se ejecutará el flujo de otorgamiento (¿nueva aplicación? ¿PUC?)", responsable: "Todas las mesas" },
-{ titulo: "Definir si la administración de la prelación se resuelve en el core bancario o con un desarrollo externo que después se conecte", responsable: "Juan Ramón Becerra" },
-{ titulo: "Alcance definitivo de la consultoría: pendiente de comentarios de la mesa y de una nueva actualización de la consultora; el diseño del flujo completo no está incluido en la propuesta actual", responsable: "Todas las mesas" },
-{ titulo: "Recursos internos o externos para el desarrollo: Tecnología no puede definirlo hasta contar con las definiciones de flujos, procesos y reglas", responsable: "Juan Ramón Becerra" }
+{ titulo: "Decisión sobre la consultora: el costo se considera elevado y se evaluarán otras estrategias", responsable: "Todas las mesas", nota: "A revisar el 26 de octubre" },
+{ titulo: "Periodo a presupuestar: seis o siete meses de recursos, ante el retraso de CECOBAN", responsable: "Abigail Vásquez" },
+{ titulo: "Costo del desarrollo de prelación en el core: sólo hay evaluación, se incluirá en la estimación del bloque de proyectos 2027", responsable: "Juan Ramón Becerra" },
+{ titulo: "Conexión con CECOBAN: sin respuesta a las evidencias y la ventana de pruebas termina el 23 de octubre", responsable: "Alejandra Muñoz" },
+{ titulo: "Definiciones de la mesa Otorgante: comercialización, oferta y prospección, que condicionan la participación de Data Hub", responsable: "Mesa Otorgante" },
+{ titulo: "Recursos internos o externos para el desarrollo: Tecnología lo evaluará al recibir las definiciones", responsable: "Juan Ramón Becerra" }
 ],
+
+
 
 /* Draft de la EDT de construcción del sistema */
 edt: [
@@ -230,6 +243,45 @@ edt: [
 
 /* Resumen semanal. Agrega una semana nueva al inicio del arreglo. */
 semanas: [
+{
+inicio: "2026-10-19",
+fin: "2026-10-23",
+titular: "El paquete de definiciones queda listo para Tecnología y se cerraron los pendientes de la semana previa; el costo de la consultora se consideró elevado y la conexión con CECOBAN sigue sin lograrse.",
+sesiones: [{ mesa: "habilitadores", fecha: "2026-10-22", nombre: "Sesión Mesa Habilitadores" }],
+puntos: {
+habilitadores: [
+"La PMO presentó el plan de trabajo macro que elabora con Isaí Juárez, en revisión con Mauricio Méndez y Alejandra Muñoz. Ya se desglosaron varias actividades; faltan definiciones y revisar las relaciones de predecesoras y sucesoras. Al estar ligadas las dependencias, un cambio de fecha o duración actualiza el resto del plan. Las sesiones con negocio corren del 26 al 30 de octubre.",
+"Isaí Juárez presentó el documento de definiciones. Para el modelo ordenante incluye recepción de solicitudes de disponibilidad, validaciones de consulta, envío de información, actualización de la prelación de cobro, registro en sistema, Domi CAN y mantenimiento. Para el otorgante, configuración del producto, cálculo de capacidad, prospección, consulta interbancaria vía CECOBAN, evaluación automática de capacidad de pago y elegibilidad, y conexión con buró. Contiene premisas, restricciones y un desglose en épicas con criterios de aceptación y capacidades tecnológicas. Falta explicitar la gestión de la cartera (contable, reportes regulatorios y cálculo de reservas), que se agregará al SOW.",
+"El paquete se entrega a Tecnología el 23 de octubre como primer entregable para el levantamiento de necesidades técnicas. No incluye las necesidades de comercialización y oferta del modelo de negocio de la mesa Otorgante, que aún no se definen. Juan Ramón Becerra planteó ver el CAN en dos rutas: la habilitación y el cumplimiento frente a CECOBAN, y el caso de negocio, donde el proyecto Cash Loan se apalancará del CAN como canal de cobro mediante domiciliación.",
+"Tecnología consultó al proveedor del core: la administración de prelaciones no es una funcionalidad nativa y requiere un desarrollo con costo. El equipo revisó cómo habilitarla sin construir un módulo completo; aún no hay costo, sólo la evaluación. La estimación del bloque de proyectos 2027 se entregará la próxima semana e incluirá esta parte.",
+"Se pidió un roadmap más general sobre el cual detallar después las historias de usuario, incluir la planificación del cálculo de capacidad de pago que trabaja Riesgos, considerar una calculadora de capacidad con reglas propias y ubicar en el plan las pruebas integrales, que dependen de la estimación de Tecnología y orientan cuándo se necesitarán los recursos solicitados.",
+"Data Hub señaló que aún no ubica cómo cuantificar su participación: las definiciones de prospección dependen de la mesa Otorgante. Mientras tanto puede involucrarse en el proceso que se entrega a Tecnología, asegurando que la información persista completa en las fuentes de datos y plataformas de explotación, ya que alimentará reportes regulatorios, estadísticas y métricas.",
+"La ventana de pruebas se extendió una semana y finaliza el 23 de octubre. Tecnología compartió evidencias de que, aun con la respuesta previa de CECOBAN, no se logra la conexión; se reenviaron los correos sin obtener respuesta. El contacto de la ABM está copiado y se le llamará para presionar a CECOBAN, ya que otros bancos tampoco han podido conectarse ni enviar los archivos JSON."
+],
+otorgante: [
+"Operaciones consideró sumamente alto el costo de la propuesta económica de la consultora para la parte documental y propuso recopilar la opinión de todas las mesas. La sesión con el líder de la mesa Otorgante se movió al lunes 26 de octubre para revisar la propuesta junto con los costos que informó CECOBAN. Se señaló que se necesitarán manos, pero que podría seguirse otra estrategia de menor costo, salvo que el mercado potencial y los beneficios del programa la sustenten."
+]
+},
+acuerdos: [
+"Se cerraron los pendientes de la semana previa: CECOBAN informó el esquema de recuperación de gastos y la información se compartió al equipo; Alejandra Muñoz compartió las fechas confirmadas, entre ellas la confirmación de participación en el CAN el 30 de octubre; se recibió la última actualización de la propuesta de la consultora; y el plan con fechas de las definiciones se envió el 21 de octubre mapeado contra el inventario de componentes.",
+"Se integrará un compilado con los costos visibles a la fecha: la consultoría, marcada para evaluación; los costos de implementación y operación que dio a conocer CECOBAN, con la precisión de que cualquier funcionalidad incremental tendrá costos adicionales para todo el gremio; los recursos que requiere Operación; y lo que Tecnología estime necesario.",
+"Se solicitará un rubro de servicios externos, en lugar de contrataciones, para el apoyo que requiere Operación, por un tema de plazo de tres meses validado previamente con Capital Humano.",
+"Juan Ramón Becerra evaluará, al recibir las definiciones, si el desarrollo puede realizarse con equipo externo con involucramiento del equipo interno de Tecnología, y propondrá la mejor alternativa una vez entregado el SOW."
+],
+alertas: [
+"La ventana de pruebas cierra el 23 de octubre sin que se logre la conexión y sin respuesta de CECOBAN a los correos con evidencias.",
+"El costo de la propuesta de la consultora se considera elevado; la decisión se revisará el 26 de octubre junto con otras estrategias de implementación.",
+"La administración de prelaciones no es nativa del core y requiere un desarrollo con costo, aún sin cuantificar.",
+"Las definiciones de comercialización, oferta y prospección de la mesa Otorgante siguen pendientes y condicionan la participación de Data Hub."
+],
+siguientes: [
+"Entregar a Tecnología el paquete de definiciones el 23 de octubre para que dimensione recursos y componentes.",
+"Presentar el 26 de octubre, en el foro con el líder de la mesa Otorgante, la valoración de la propuesta de la consultora y el compilado de costos.",
+"Definir el periodo a presupuestar, seis o siete meses, ante el retraso de CECOBAN.",
+"Recibir de Tecnología la estimación del bloque de proyectos 2027, que incluye el desarrollo de prelación."
+],
+fuentes: ["Sesión Mesa Habilitadores, 22 oct 2026"]
+},
 {
 inicio: "2026-10-12",
 fin: "2026-10-16",
