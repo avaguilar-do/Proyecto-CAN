@@ -134,23 +134,11 @@ frentes: [
 /* Vacío muestra en el tablero "No hay decisiones pendientes por el momento" */
 decisiones: [],
 
-
-
-
-
 /* Alertas y riesgos. nivel: "alto" | "medio" */
 /* Vacío muestra en el tablero "No identificados por el momento" */
 alertas: [
 { nivel: "alto", titulo: "La ventana de pruebas cierra sin lograr la conexión con CECOBAN", detalle: "El periodo de pruebas termina el 23 de octubre y no se consigue la conexión ni siquiera con la respuesta previa de CECOBAN. Se reenviaron los correos solicitando retroalimentación, con el contacto de la ABM copiado, y no hay respuesta; se le llamará para que apoye a presionar a CECOBAN. Otros bancos tampoco han podido conectarse ni enviar los archivos JSON.", fuente: "Habilitadores, 22 oct 2026" }
 ],
-
-
-
-
-
-
-
-
 
 /* Actividades por mesa. inicio es opcional; fin es la fecha compromiso.
 ref = identificador de la minuta (opcional). */
@@ -221,8 +209,6 @@ definiciones: [
 { titulo: "Definiciones de la mesa Otorgante: comercialización, oferta y prospección, que condicionan la participación de Data Hub", responsable: "Mesa Otorgante" },
 { titulo: "Recursos internos o externos para el desarrollo: Tecnología lo evaluará al recibir las definiciones", responsable: "Juan Ramón Becerra" }
 ],
-
-
 
 /* Draft de la EDT de construcción del sistema */
 edt: [
@@ -624,16 +610,6 @@ flujoCecoban: [
 ],
 flujoCierre: "Notificación y actualización: ambos bancos reciben la prelación y actualizan sus sistemas y controles internos. CECOBAN orquesta, valida y administra la información.",
 
-/* Macroproceso de originación y administración */
-macroproceso: [
-{ nombre: "Prospección", detalle: "Integración del expediente, validación de biométricos, folio NOM 151 y precalificación con la documentación presentada." },
-{ nombre: "Mesa de control", detalle: "Validación de datos del expediente, precalificación con políticas internas y armado automático de archivos para el intercambio de información." },
-{ nombre: "Ingreso al sistema CAN", detalle: "Solicitud y recepción de información, y validación de la capacidad de pago conforme a reglas internas." },
-{ nombre: "Dispersión del crédito", detalle: "Si cumple las reglas internas, dispersión automática y formalización del crédito en ODS y en el core bancario." },
-{ nombre: "Recepción del flujo en cuenta CIEC", detalle: "Monitoreo de la recepción del flujo y conciliación para enviarlo a posteo." },
-{ nombre: "Posteo de pagos", detalle: "Conciliación periódica con los layouts de respuesta de CECOBAN para identificar y postear los pagos de los créditos." }
-],
-
 mercado: {
 cifras: [
 { valor: "33.5 M", texto: "personas con ingreso recurrente verificable (empleo formal y pensionados contributivos)" },
@@ -703,84 +679,4 @@ nivelesRiesgo: [
 ]
 },
 
-/* Matriz de responsabilidades */
-responsabilidades: [
-{ nombre: "Sergio Olivero", rol: "Líder Mesa Otorgante", objetivo: "Lidera y coordina al equipo de la mesa Otorgante, asegurando el cumplimiento de los objetivos en tiempo y forma.", mesas: ["otorgante"] },
-{ nombre: "Agustín Nava", rol: "Líder Habilitadores", objetivo: "Lidera y coordina al equipo de la mesa Habilitadores, asegurando el cumplimiento de los objetivos en tiempo y forma.", mesas: ["otorgante", "habilitadores"] },
-{ nombre: "Christian Carreón", rol: "Líder Mesa Ordenante", objetivo: "Lidera la gestión integral de riesgos operativos y de crédito: KRI, límites, prelación y validación de capacidad de pago.", mesas: ["otorgante", "ordenante"] },
-{ nombre: "Juan Ramón Becerra", rol: "Arquitecto", objetivo: "Define la arquitectura y la solución técnica: integración con CECOBAN, adaptación del core y sistema de originación.", mesas: ["habilitadores"] },
-{ nombre: "Isaí Juárez", rol: "Product Owner", objetivo: "Representa la necesidad de negocio, prioriza la solución y asegura que la entrega genere el valor esperado.", mesas: ["otorgante", "ordenante", "habilitadores"] },
-{ nombre: "Abigail Vásquez", rol: "Project Manager", objetivo: "Coordina el día a día: plan de trabajo, entregables, cadencia, gestión y seguimiento entre mesas.", mesas: ["otorgante", "ordenante", "habilitadores"] },
-{ nombre: "Mauricio Méndez", rol: "Arquitecto de negocio", objetivo: "Habilita el modelo operativo integral de prospección, otorgamiento y servicio.", mesas: ["habilitadores"] },
-{ nombre: "Carlos Budar", rol: "Rentabilidad", objetivo: "Gestiona el modelo de rentabilidad: ingresos, gastos y costos de fondeo, originación y servicing.", mesas: ["otorgante"] },
-{ nombre: "Diana Angeles", rol: "Modelo de negocio y producto", objetivo: "Define la propuesta de valor del producto: mercado objetivo, oferta de crédito y captación, y conceptualización del cliente.", mesas: ["otorgante"] },
-{ nombre: "Rodrigo De Marchena", rol: "Certificación y auditoría", objetivo: "Garantiza el cumplimiento de auditoría y certificación mediante evidencia documental y el dictamen de Auditoría Interna.", mesas: ["otorgante", "ordenante", "habilitadores"] },
-{ nombre: "Karen Ramírez", rol: "Journey funcional", objetivo: "Diseña y optimiza el journey del cliente, alineando procesos, controles y tecnología.", mesas: ["otorgante", "ordenante", "habilitadores"] },
-{ nombre: "Diana Torres", rol: "Procesos y atención a clientes", objetivo: "Diseña e implementa los procesos de atención y servicio al cliente, y la gestión de aclaraciones.", mesas: ["habilitadores"] },
-{ nombre: "Sergio Olivero y Rubén Cohen", rol: "Comercialización", objetivo: "Diseñan e implementan la estrategia de masificación de productos y canales de distribución.", mesas: ["otorgante"] },
-{ nombre: "Miguel Martínez", rol: "Normatividad", objetivo: "Diseña la metodología de capacidad de pago y las políticas de otorgamiento, validadas por Riesgos.", mesas: ["otorgante"] },
-{ nombre: "Alejandra Muñoz", rol: "Funcional y pruebas", objetivo: "Diseña procesos y pruebas funcionales de prelación, otorgamiento, domiciliación y conciliación.", mesas: ["ordenante", "habilitadores"] },
-{ nombre: "Gabriela Hernández", rol: "Legal", objetivo: "Asegura la estructura jurídica y contractual del negocio: carta vinculante y contrato marco.", mesas: ["ordenante", "habilitadores"] },
-{ nombre: "Nelly Trejo", rol: "Operaciones", objetivo: "Diseña e implementa el manual de operaciones: procesos, roles, controles y lineamientos operativos.", mesas: ["otorgante", "ordenante", "habilitadores"] },
-{ nombre: "Aura Marrón", rol: "Banca Patrimonial", objetivo: "Diseña el mecanismo de identificación de cuentas ordenantes, con trazabilidad y validación.", mesas: ["ordenante"] }
-],
-
-cadencia: {
-estado: "Instalada",
-dias: [
-{ dia: "Lunes", mesa: null },
-{ dia: "Martes", mesa: null },
-{ dia: "Miércoles", mesa: "otorgante" },
-{ dia: "Jueves", mesa: "habilitadores" },
-{ dia: "Viernes", mesa: "ordenante" }
-],
-nota: "El primer mes las sesiones son semanales; después se evaluará cambiarlas a quincenales. La Mesa de decisión sesiona la última semana de cada mes."
-},
-
-recursos: {
-fuente: "Mesa de decisión, 9 sep 2026",
-posiciones: [
-{ mesa: "otorgante", actividad: "Mercado objetivo: oportunidad, barreras de entrada y definición de fases", responsable: "Diana Angeles", posicion: "Especialista", n: 1, tipo: "Estructural", temporalidad: "Por definir" },
-{ mesa: "otorgante", actividad: "Producto crédito y captación: competitividad, precio, monto y comisiones", responsable: "Diana Angeles", posicion: "Gerente", n: 1, tipo: "Estructural", temporalidad: "Por definir" },
-{ mesa: "otorgante", actividad: "Procesos, atención a clientes y ciclo operativo mensual", responsable: "Diana Torres", posicion: "Gerente", n: 1, tipo: "Operacional", temporalidad: "Permanente" },
-{ mesa: "otorgante", actividad: "Procesos, atención a clientes y ciclo operativo mensual", responsable: "Diana Torres", posicion: "Coordinador", n: 1, tipo: "Operacional", temporalidad: "Permanente" },
-{ mesa: "otorgante", actividad: "Procesos, atención a clientes y ciclo operativo mensual", responsable: "Diana Torres", posicion: "Especialistas (post venta)", n: 3, tipo: "Operacional", temporalidad: "Permanente" },
-{ mesa: "otorgante", actividad: "Procesos, atención a clientes y ciclo operativo mensual", responsable: "Diana Torres", posicion: "Ejecutivos (atención a clientes)", n: 3, tipo: "Operacional", temporalidad: "Permanente" },
-{ mesa: "otorgante", actividad: "Operar el otorgamiento de crédito CAN", responsable: "Nelly Trejo", posicion: "Gerente", n: 1, tipo: "Operacional", temporalidad: "Permanente" },
-{ mesa: "otorgante", actividad: "Operar el otorgamiento de crédito CAN", responsable: "Nelly Trejo", posicion: "Especialistas (procesamiento y mesa de control)", n: 2, tipo: "Operacional", temporalidad: "Permanente" },
-{ mesa: "ordenante", actividad: "Mecanismo de atención de aclaraciones (SAAC con CECOBAN)", responsable: "Alejandra Muñoz", posicion: "Especialista", n: 1, tipo: "Implementación", temporalidad: "Temporal" },
-{ mesa: "habilitadores", actividad: "Construcción del sistema: validación funcional y matriz de pruebas integrales", responsable: "Alejandra Muñoz", posicion: "Especialista", n: 1, tipo: "Implementación", temporalidad: "Temporal" },
-{ mesa: "habilitadores", actividad: "Construcción del sistema: operativa de la cámara y mejora continua", responsable: "Alejandra Muñoz", posicion: "Especialista", n: 1, tipo: "Operacional", temporalidad: "Permanente" },
-{ mesa: "habilitadores", actividad: "Preparación interna: flujogramas, validación de procesos y documentación", responsable: "Mauricio Méndez", posicion: "Especialistas", n: 2, tipo: "Implementación", temporalidad: "Temporal" },
-{ mesa: "habilitadores", actividad: "Transversal: asegurar la definición funcional integral del CAN", responsable: "Karen Ramírez", posicion: "PO Sr", n: 1, tipo: "Implementación", temporalidad: "Temporal" },
-{ mesa: "habilitadores", actividad: "Construcción del sistema de originación TI, core bancario, PUC e integración", responsable: "Juan Ramón Becerra", posicion: "Servicios de desarrollo externo (en dimensionamiento)", n: 1, tipo: "Implementación", temporalidad: "Temporal" }
-],
-enAprobacion: [
-{ mesa: "ordenante", actividad: "Certificación como banco ordenante (y otorgante)", responsable: "Christian Carreón", posicion: "Especialista de auditoría", n: 1, temporalidad: "Permanente", detalle: "Auditoría del nuevo producto CAN, seguimiento de eventos operativos y de seguridad informática, auditoría del plan de prevención de fraude en TI y seguimiento de la auditoría de Indeval." }
-],
-consultor: [
-{ mesa: "otorgante", requiere: false },
-{ mesa: "ordenante", requiere: false },
-{ mesa: "habilitadores", requiere: true, detalle: "Documentación de procesos (manual de operaciones)." }
-]
-},
-
-/* Carpetas de referencia (requieren acceso con cuenta de Consubanco) */
-documentos: [
-{
-grupo: "Contexto del programa",
-enlace: "https://drive.google.com/drive/folders/11fIIHn-wKXwYNXAYLVuntwj6rw80BEjJ",
-items: ["Circular 6/2025", "Kick off", "Integración de equipos y metodología", "Propuesta de la consultora Akya"]
-},
-{
-grupo: "Operaciones",
-enlace: "https://drive.google.com/drive/folders/189bjh2vaB7bYqeB2gWY6qOtlS_LK2auY",
-items: ["Circular 6/2025", "Minutas y consultas del gremio a Banxico, con respuestas", "Plan de trabajo con fechas", "Entendimiento operativo de Domi CAN", "Catálogos y causas de rechazo de la operación CAN"]
-},
-{
-grupo: "Tecnología (CECOBAN v1.2)",
-enlace: "https://drive.google.com/drive/folders/19SyDQNWtCw8a-1qCxpMGIcdNtnWkxdHF",
-items: ["Especificaciones técnicas CAN v1.2", "Guía de conexión al simulador CAN v1.2", "CAN Schemas JSON v1.2 ABM", "CAN Ejemplos JSON v1.2 ABM"]
-}
-]
 };
