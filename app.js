@@ -604,6 +604,60 @@ tagMesa(x.mesa), " ", chip(est));
 }));
 }
 
+function renderMatrizImplementacion() {
+const M = D.matrizImplementacion;
+if (!M) return;
+fill("#mi-rango", "Inicio " + fCorta(fecha(M.inicio)) + " · Go live " + fCorta(fecha(M.goLive)));
+fill("#mi-nota", M.nota);
+fill("#mi-leyenda", M.leyenda.map((l) =>
+h("li", null, h("span", { class: "sw mi-" + l.tipo, "aria-hidden": "true" }), l.texto)));
+
+const cab = (etiqueta, campo) => h("tr", null,
+h("th", { scope: "row" }, etiqueta),
+M.fases.map((f) => h("td", null, f[campo])));
+
+const filas = [];
+M.mesas.forEach((m) => {
+filas.push(h("tr", { class: "group-row" },
+h("th", { colspan: String(M.fases.length + 1), scope: "colgroup" }, dotMesa(m.mesa), " " + m.nombre)));
+filas.push(h("tr", { "data-mesa": m.mesa },
+h("th", { scope: "row", class: "mi-comp" },
+h("ul", null, m.componentes.map((c) => h("li", null, c)))),
+M.celdas.map((c) => h("td", { class: "mi-celda mi-" + c.tipo }, c.texto))));
+});
+
+fill("#mi-tabla",
+h("caption", null, "Cada mesa recorre la misma secuencia de nueve fases. " + M.titulo + "."),
+h("thead", null,
+h("tr", null,
+h("th", { scope: "col" }, "Fase"),
+M.fases.map((f) => h("th", { scope: "col", class: "mi-fase" },
+h("span", { class: "mi-n" }, f.n), f.nombre)))),
+h("tbody", null,
+cab("Área responsable", "area"),
+cab("Dependencia", "dependencia"),
+filas));
+
+const propias = [];
+M.mesas.forEach((m) => {
+if (!m.propias || !m.propias.length) return;
+propias.push(h("tr", { class: "group-row" },
+h("th", { colspan: "4", scope: "colgroup" }, dotMesa(m.mesa), " " + m.nombre)));
+m.propias.forEach((x) => propias.push(h("tr", null,
+h("th", { scope: "row" }, x.nombre),
+h("td", null, x.responsable),
+h("td", null, x.dependencia),
+h("td", null, x.fechas))));
+});
+fill("#mi-propias",
+h("thead", null, h("tr", null,
+h("th", { scope: "col", class: "t-min" }, "Actividad"),
+h("th", { scope: "col" }, "Responsable"),
+h("th", { scope: "col" }, "Dependencia"),
+h("th", { scope: "col" }, "Fechas"))),
+h("tbody", null, propias));
+}
+
 /* =====================================================================
 5. TIMELINE CECOBAN
 ===================================================================== */
@@ -779,7 +833,7 @@ renderEncabezado, renderHero, renderDecisionesAlertas, renderVencimientosResumen
 renderEstructura, renderArranque, renderMercado,
 renderFiltroMesas, pintarActividades, renderDefiniciones, renderEDT,
 renderEstaSemana, renderSemanas,
-renderTimelineProyecto, renderCecoban, renderRegulatorio
+renderTimelineProyecto, renderMatrizImplementacion, renderCecoban, renderRegulatorio
 ];
 pasos.forEach((fn) => {
 try { fn(); } catch (err) {
