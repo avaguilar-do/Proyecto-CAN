@@ -13,7 +13,7 @@ Fuentes: presentaciones y minutas del Programa CAN del 24-ago al
 ========================================================================== */
 window.CAN_DATA = {
 /* Fecha de corte de la información mostrada */
-corte: "2026-10-22",
+corte: "2026-10-30",
 
 programa: {
 nombre: "Programa CAN",
@@ -137,8 +137,11 @@ decisiones: [],
 /* Alertas y riesgos. nivel: "alto" | "medio" */
 /* Vacío muestra en el tablero "No identificados por el momento" */
 alertas: [
-{ nivel: "alto", titulo: "La ventana de pruebas cierra sin lograr la conexión con CECOBAN", detalle: "El periodo de pruebas termina el 23 de octubre y no se consigue la conexión ni siquiera con la respuesta previa de CECOBAN. Se reenviaron los correos solicitando retroalimentación, con el contacto de la ABM copiado, y no hay respuesta; se le llamará para que apoye a presionar a CECOBAN. Otros bancos tampoco han podido conectarse ni enviar los archivos JSON.", fuente: "Habilitadores, 22 oct 2026" }
+{ nivel: "alto", titulo: "Ventana de pruebas cerrada sin poder consumir las APIs de CECOBAN", detalle: "El problema de comunicación se resolvió, pero no es posible consumir las APIs. Las últimas evidencias se enviaron un sábado, con el periodo ya cerrado, después de que CECOBAN tardara cerca de semana y media en responder correos enviados 15 días antes. Se solicitará a CECOBAN que reabra el sistema por un tiempo para concluir las pruebas y se buscarán horarios para revisar los errores en línea entre ambos equipos técnicos.", fuente: "Habilitadores, 29 oct 2026" },
+{ nivel: "medio", titulo: "El apoyo externo depende de la aprobación del presupuesto", detalle: "Se decidió no contratar a la consultora. Primero debe aprobarse el presupuesto del proyecto, lo que se espera en un par de semanas, y se está a la espera del costo aproximado de los recursos temporales que entregue Recursos Humanos. Una vez aprobado, cada área buscará a sus recursos; se agregará un documentador a la solicitud de Operación.", fuente: "Habilitadores, 29 oct 2026" }
 ],
+
+
 
 /* Actividades por mesa. inicio es opcional; fin es la fecha compromiso.
 ref = identificador de la minuta (opcional). */
@@ -164,7 +167,6 @@ actividades: [
 { mesa: "ordenante", titulo: "Definición de capacidades", responsable: "Christian Carreón", fin: "2026-09-09", estado: "completado", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "ordenante", titulo: "Coordinar la sesión para generar las matrices de funcionalidades, necesidades y validaciones de cada etapa de los macroprocesos", responsable: "Isaí Juárez", fechaTexto: "ASAP", nota: "Con Berenice Serrano y Rodrigo De Marchena", fuente: "Minuta Modelo Ordenante, 25 sep 2026" },
 { mesa: "ordenante", titulo: "Avisar a la mesa en qué momentos se podrán certificar los avances y buscar espacios de trabajo conjunto en las definiciones", responsable: "Isaí Juárez y Abigail Vásquez", estado: "continuo", fuente: "Minuta Modelo Ordenante, 25 sep 2026" },
-{ mesa: "ordenante", titulo: "Gap assessment: matriz de brechas", responsable: "Rodrigo De Marchena", inicio: "2026-09-01", fin: "2026-10-31", fuente: "Cronograma de auditoría propuesto" },
 { mesa: "ordenante", titulo: "Modelo de operación ordenante", responsable: "Christian Carreón", inicio: "2026-09-21", fin: "2026-11-20", nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
 
 /* ---- Habilitadores ---- */
@@ -181,34 +183,41 @@ actividades: [
 { mesa: "habilitadores", titulo: "Revisar y validar el alcance de la consultora, rolarlo al interior con todos los equipos y enviar comentarios para que lo actualice", responsable: "Nelly Trejo y equipo", fin: "2026-10-19", estado: "completado", fuente: "Minuta Habilitadores, 15 oct 2026" },
 { mesa: "habilitadores", titulo: "Enviar correo formal a la ABM, con copia a CECOBAN, solicitando que se confirmen oficialmente las fechas de las actividades próximas a vencer que dependen de CECOBAN", responsable: "Nelly Trejo", fin: "2026-10-19", estado: "completado", fuente: "Minuta Habilitadores, 15 oct 2026" },
 { mesa: "habilitadores", titulo: "Entregar el plan con las fechas en que se concluirán las definiciones de los componentes a habilitar, mapeado contra el inventario de componentes", responsable: "Edsel Martínez e Isaí Juárez", fin: "2026-10-21", nota: "Permitirá a Tecnología determinar si se requieren recursos internos o externos", estado: "completado", fuente: "Minuta Habilitadores, 15 oct 2026" },
-{ mesa: "habilitadores", titulo: "Revisar entre todas las mesas el alcance de la consultora y validarlo", responsable: "Todas las mesas", fin: "2026-10-26", nota: "Reprogramada: se revisará en el foro del 26 de octubre", fuente: "Minuta Habilitadores, 15 oct 2026" },
+{ mesa: "habilitadores", titulo: "Revisar entre todas las mesas el alcance de la consultora y validarlo", responsable: "Todas las mesas", fin: "2026-10-26", nota: "Reprogramada: se revisará en el foro del 26 de octubre", estado: "completado", fuente: "Minuta Habilitadores, 15 oct 2026" },
 { mesa: "habilitadores", titulo: "Recibir la cotización del consultor externo", responsable: "Rosaura Flores y Sergio Olivero", fin: "2026-10-19", nota: "La consultora envió una actualización del alcance el 15 de octubre, que ya incorpora el acompañamiento en la generación de manuales; se espera una actualización más junto con la cotización", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Generar la matriz de pruebas de los módulos de conexión con CECOBAN", responsable: "Isaí Juárez, Mauricio Méndez, Alejandra Muñoz y Nelly Trejo", fin: "2026-09-25", estado: "completado", fuente: "Minuta Habilitadores, 10 sep 2026" },
 { mesa: "habilitadores", titulo: "Volver a compartir el documento de definiciones actualizado con los comentarios de la sesión y validarlo con Operaciones", responsable: "Isaí Juárez", fin: "2026-10-22", estado: "completado", fuente: "Minuta Habilitadores, 22 oct 2026" },
 { mesa: "habilitadores", titulo: "Llamar al contacto de la ABM para que apoye a presionar a CECOBAN sobre las evidencias y el cierre de la ventana de pruebas", responsable: "Alejandra Muñoz", fin: "2026-10-22", estado: "completado", fuente: "Minuta Habilitadores, 22 oct 2026" },
-{ mesa: "habilitadores", titulo: "Entregar a Tecnología el paquete de definiciones para que dimensione los recursos y componentes del CAN", responsable: "Isaí Juárez", fin: "2026-10-23", nota: "Primer entregable para el levantamiento de necesidades técnicas", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Entregar a Tecnología el paquete de definiciones para que dimensione los recursos y componentes del CAN", responsable: "Isaí Juárez", fin: "2026-10-23", nota: "Primer entregable para el levantamiento de necesidades técnicas", estado: "completado", fuente: "Minuta Habilitadores, 22 oct 2026" },
 { mesa: "habilitadores", titulo: "Compartir el tabulador aproximado del costo mensual de los recursos que requiere Operación", responsable: "Alejandra Muñoz", fin: "2026-10-23", nota: "Para integrarlo a los costos totales del proyecto", fuente: "Minuta Habilitadores, 22 oct 2026" },
-{ mesa: "habilitadores", titulo: "Presentar en el foro con el líder de la mesa Otorgante la valoración de la propuesta de la consultora, explorar otras estrategias y mostrar el compilado de costos conocidos", responsable: "Abigail Vásquez", fin: "2026-10-26", nota: "Incluye los costos que informó CECOBAN", fuente: "Minuta Habilitadores, 22 oct 2026" },
-{ mesa: "habilitadores", titulo: "Promover en la mesa Otorgante las definiciones de prospección, tableros e interacciones de datos que requiere Data Hub", responsable: "Abigail Vásquez", fin: "2026-10-26", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Presentar en el foro con el líder de la mesa Otorgante la valoración de la propuesta de la consultora, explorar otras estrategias y mostrar el compilado de costos conocidos", responsable: "Abigail Vásquez", fin: "2026-10-26", nota: "Incluye los costos que informó CECOBAN", estado: "completado", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Promover en la mesa Otorgante las definiciones de prospección, tableros e interacciones de datos que requiere Data Hub", responsable: "Abigail Vásquez", fin: "2026-10-26", estado: "completado", fuente: "Minuta Habilitadores, 22 oct 2026" },
 { mesa: "habilitadores", titulo: "Evaluar si el desarrollo puede realizarse con equipo externo, con involucramiento del equipo interno de Tecnología, y proponer la mejor alternativa", responsable: "Juan Ramón Becerra", fechaTexto: "Al entregarse el SOW", fuente: "Minuta Habilitadores, 22 oct 2026" },
-{ mesa: "habilitadores", titulo: "Entregar la estimación del bloque de proyectos 2027, que incluye el desarrollo de prelación en el core", responsable: "Juan Ramón Becerra", inicio: "2026-10-26", fin: "2026-10-30", nota: "Necesaria para el presupuesto del siguiente año", fuente: "Minuta Habilitadores, 22 oct 2026" },
-{ mesa: "habilitadores", titulo: "Periodo de pruebas con el simulador API de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-14", fin: "2026-10-23", nota: "La ventana cierra el 23 de octubre sin posibilidad de otra prórroga. No se logra la conexión y los correos con evidencias siguen sin respuesta", fuente: "Roadmap CECOBAN; comunicado CECOBAN" },
+{ mesa: "habilitadores", titulo: "Entregar la estimación del bloque de proyectos 2027, que incluye el desarrollo de prelación en el core", responsable: "Juan Ramón Becerra", inicio: "2026-10-26", fin: "2026-10-30", nota: "Necesaria para el presupuesto del siguiente año", estado: "completado", fuente: "Minuta Habilitadores, 22 oct 2026" },
+{ mesa: "habilitadores", titulo: "Dar seguimiento con Leonor Arias para recibir la carta vinculante y reenviarla a Alejandra Muñoz", responsable: "Abigail Vásquez", fin: "2026-10-30", estado: "completado", fuente: "Minuta Habilitadores, 29 oct 2026" },
+{ mesa: "habilitadores", titulo: "Compartir el plan de trabajo macro, aprobado como primera línea base, y subirlo a la página de seguimiento del CAN", responsable: "Abigail Vásquez", fin: "2026-10-29", estado: "completado", nota: "Se actualizará cuando se cuente con la información de Tecnología", fuente: "Minuta Habilitadores, 29 oct 2026" },
+{ mesa: "habilitadores", titulo: "Compartir el documento de Domi CAN para que Tecnología registre sus datos, valide la conexión y confirme los sitios", responsable: "Abigail Vásquez y Juan Ramón Becerra", fin: "2026-11-09", nota: "CECOBAN envió dos sitios; Tecnología lo revisará con infraestructura. El 9 de noviembre es la fecha límite de envío", fuente: "Minuta Habilitadores, 29 oct 2026" },
+{ mesa: "habilitadores", titulo: "Solicitar a CECOBAN la reapertura del sistema para concluir las pruebas de envío y recepción de archivos JSON, y obtener horarios para una sesión entre ambos equipos técnicos", responsable: "Alejandra Muñoz y Nelly Trejo", fin: "2026-10-29", fuente: "Minuta Habilitadores, 29 oct 2026" },
+{ mesa: "habilitadores", titulo: "Incorporar al presupuesto el costo de los recursos temporales de Operación, incluido el documentador, y compartirlo para el estimador de costos", responsable: "Abigail Vásquez, Alejandra Muñoz y Juan Ramón Becerra", fechaTexto: "Por definir", nota: "En espera de la información de Recursos Humanos", fuente: "Minuta Habilitadores, 29 oct 2026" },
+{ mesa: "habilitadores", titulo: "Coordinar la sesión con Agustín Nava, Nelly Trejo, Alejandra Muñoz y Mauricio Méndez para validar la parte legal de Domi CAN", responsable: "Abigail Vásquez", fechaTexto: "Por definir", nota: "Una vez que responda el área legal", fuente: "Minuta Habilitadores, 29 oct 2026" },
+{ mesa: "habilitadores", titulo: "Periodo de pruebas con el simulador API de CECOBAN", responsable: "Juan Ramón Becerra", inicio: "2026-09-14", fin: "2026-10-23", nota: "La ventana cerró el 23 de octubre. No es posible consumir las APIs; se solicitará a CECOBAN que reabra el sistema para concluir las pruebas", fuente: "Roadmap CECOBAN; comunicado CECOBAN" },
 { mesa: "habilitadores", titulo: "CECOBAN informa el esquema de recuperación de gastos", responsable: "TBD", fin: "2026-10-16", estado: "completado", nota: "CECOBAN informó el esquema y la información se compartió al equipo", fuente: "Roadmap CECOBAN" },
-{ mesa: "habilitadores", titulo: "Entrega de la carta vinculante a CECOBAN", responsable: "Gabriela Hernández (Legal)", inicio: "2026-10-19", fin: "2026-10-23", fuente: "Roadmap CECOBAN" },
-{ mesa: "habilitadores", titulo: "Entrega del contrato marco", responsable: "Gabriela Hernández (Legal)", fin: "2026-10-28", fuente: "Roadmap CECOBAN" },
+{ mesa: "habilitadores", titulo: "Entrega de la carta vinculante a CECOBAN", responsable: "Gabriela Hernández (Legal)", inicio: "2026-10-19", fin: "2026-10-30", estado: "completado", nota: "Validada por el área legal y entregada a CECOBAN el 30 de octubre", fuente: "Roadmap CECOBAN" },
+{ mesa: "habilitadores", titulo: "Entrega del contrato marco", responsable: "Gabriela Hernández (Legal)", fin: "2026-10-28", estado: "completado", fuente: "Roadmap CECOBAN" },
 { mesa: "habilitadores", titulo: "Construcción del sistema", responsable: "Juan Ramón Becerra", inicio: "2026-10-01", fin: "2027-03-31", nota: "Fechas del draft del timeline", fuente: "Mesa de decisión, 9 sep 2026" },
 { mesa: "habilitadores", titulo: "Compartir en la carpeta del programa toda la información que envíe la ABM", responsable: "Alejandra Muñoz", estado: "continuo", fuente: "Minuta Habilitadores, 10 sep 2026" }
 ],
 
 /* Definiciones pendientes que se muestran en la pestaña Actividades */
 definiciones: [
-{ titulo: "Decisión sobre la consultora: el costo se considera elevado y se evaluarán otras estrategias", responsable: "Todas las mesas", nota: "A revisar el 26 de octubre" },
-{ titulo: "Periodo a presupuestar: seis o siete meses de recursos, ante el retraso de CECOBAN", responsable: "Abigail Vásquez" },
-{ titulo: "Costo del desarrollo de prelación en el core: sólo hay evaluación, se incluirá en la estimación del bloque de proyectos 2027", responsable: "Juan Ramón Becerra" },
-{ titulo: "Conexión con CECOBAN: sin respuesta a las evidencias y la ventana de pruebas termina el 23 de octubre", responsable: "Alejandra Muñoz" },
-{ titulo: "Definiciones de la mesa Otorgante: comercialización, oferta y prospección, que condicionan la participación de Data Hub", responsable: "Mesa Otorgante" },
-{ titulo: "Recursos internos o externos para el desarrollo: Tecnología lo evaluará al recibir las definiciones", responsable: "Juan Ramón Becerra" }
+{ titulo: "Reapertura del sistema de pruebas: por solicitar a CECOBAN; el consumo de APIs debe resolverse con su equipo técnico", responsable: "Alejandra Muñoz" },
+{ titulo: "Presupuesto de recursos temporales: en espera del costo de Recursos Humanos; se agregará un documentador", responsable: "Abigail Vásquez" },
+{ titulo: "Fechas de desarrollo, QA y UAT: dependen de la información de Tecnología y de la prioridad que se asigne al proyecto", responsable: "Juan Ramón Becerra" },
+{ titulo: "Responsable por actividad del plan de trabajo: hoy está por áreas y el siguiente paso es asignar a la persona responsable", responsable: "Abigail Vásquez" },
+{ titulo: "Definiciones de la mesa Otorgante: comercialización, oferta y prospección, que condicionan la participación de Data Hub", responsable: "Mesa Otorgante" }
 ],
+
+
 
 /* Draft de la EDT de construcción del sistema */
 edt: [
@@ -229,6 +238,44 @@ edt: [
 
 /* Resumen semanal. Agrega una semana nueva al inicio del arreglo. */
 semanas: [
+{
+inicio: "2026-10-26",
+fin: "2026-10-30",
+titular: "El plan de trabajo macro se aprobó como primera línea base y la carta vinculante llegó a CECOBAN; se decidió no contratar a la consultora y las pruebas siguen detenidas por el consumo de las APIs.",
+sesiones: [{ mesa: "habilitadores", fecha: "2026-10-29", nombre: "Sesión Mesa Habilitadores" }],
+puntos: {
+habilitadores: [
+"Se presentó el plan de trabajo a nivel de actividades generales con fechas compromiso, que incluye las historias que desarrollará soluciones de negocio y una secuencia revisada con Auditoría Interna: definiciones; primera revisión de auditoría de la parte documental; desarrollo, que puede avanzar en paralelo; pruebas de QA; pruebas de UAT; revisión de auditoría de esas pruebas; generación de manuales; y revisión final de auditoría. Se aprobó como primera línea base del proyecto.",
+"Las definiciones iniciaron el 12 de octubre y concluirán el 31 de diciembre; la primera revisión de auditoría será del 4 al 18 de enero. Las fechas de desarrollo, QA y UAT dependen de la información que entregue Tecnología, que a su vez depende de la prioridad que se asigne al proyecto. La generación de manuales tomaría tres semanas una vez concluidas las pruebas de UAT, y la revisión final de auditoría para la certificación como CAN, cerca de dos semanas.",
+"Soluciones de negocio sugirió optimizar la generación de manuales avanzando con la información de las definiciones y complementándola durante las pruebas. El arquitecto de negocio explicó que hoy no hay una figura dedicada a esa tarea, motivo por el que se había considerado a la consultora, y que se ubicó después de las pruebas para que el producto esté desarrollado y probado antes de generar el manual.",
+"Se decidió no contratar a la consultora. Primero debe aprobarse el presupuesto del proyecto, lo que se espera en un par de semanas, y se está a la espera del costo aproximado de los recursos temporales que entregue Recursos Humanos. Operaciones precisó que su solicitud previa no incluía la parte documental, por lo que se agregará un documentador; los validadores funcionales para UAT ya estaban contemplados.",
+"Sobre la agrupación de actividades, la PMO indicó que se agruparon según los objetivos de cada mesa y que pueden reubicarse. El líder de la mesa señaló que el criterio es válido siempre que quede claro el responsable de cada actividad, para no perder la secuencia ni la cadencia de entrega. Hoy el plan está por áreas y el siguiente paso es asignar a la persona responsable.",
+"El documento de definiciones del CAN se entregó a Tecnología la semana anterior; con él ya se realizó un costo aproximado del proyecto, considerando gasto operativo y necesidades, y el requerimiento se ingresó formalmente. Tecnología indicó que la información fue suficiente para estimar, que se requiere ver el panorama integral y las sinergias con otras iniciativas (en particular Cash Loans, que podría usar este modelo) y que, una vez aprobado, iniciará el análisis y diseño detallado.",
+"Operación tendrá una sesión con CECOBAN para revisar los pendientes tras la última evidencia enviada, solicitar que se reabra el sistema por un tiempo y acordar horarios para revisar los errores en línea entre ambos equipos técnicos. Tecnología precisó que las pruebas sí se realizaron en tiempo y que el problema de comunicación ya se resolvió, pero hoy no es posible consumir las APIs.",
+"Operación compartió el documento de Domi CAN para definir responsables, que serán Juan Ramón Becerra, Nelly Trejo, Agustín Nava y Alejandra Muñoz. CECOBAN envió dos sitios, por lo que debe confirmarse en cuál o cuáles se conectará el banco; Tecnología lo revisará con infraestructura. La fecha límite para enviar el archivo es el 9 de noviembre."
+]
+},
+acuerdos: [
+"El plan de trabajo macro se aprobó como primera línea base, se compartió al equipo y se subirá a la página de seguimiento del CAN; se actualizará cuando se cuente con la información de Tecnología.",
+"La carta vinculante se recibió de Leonor Arias y Alejandra Muñoz la hizo llegar a CECOBAN el 30 de octubre.",
+"Se incorporará al presupuesto el costo de los recursos temporales de Operación, incluido el documentador, con base en la información de Recursos Humanos, y se agregará al estimador de costos que presentó Tecnología a Dirección Ejecutiva.",
+"Se compartió el documento de Domi CAN para que Tecnología registre sus datos, valide la conexión y confirme los sitios, con fecha límite de envío el 9 de noviembre.",
+"Una vez que responda el área legal se coordinará una sesión con Agustín Nava, Nelly Trejo, Alejandra Muñoz y Mauricio Méndez para validar la parte legal de Domi CAN."
+],
+alertas: [
+"El problema actual con CECOBAN es que no es posible consumir las APIs; se pedirá reabrir el sistema para concluir las pruebas de envío y recepción de archivos JSON.",
+"El apoyo externo depende de que se apruebe el presupuesto del proyecto, previsto en un par de semanas.",
+"Las fechas de desarrollo, QA y UAT del plan siguen sin definirse hasta que Tecnología entregue su información y se asigne prioridad al proyecto.",
+"Falta asignar la persona responsable de cada actividad del plan, que hoy está organizado por áreas."
+],
+siguientes: [
+"Resolver con el equipo técnico de CECOBAN el consumo de las APIs y la reapertura del sistema de pruebas.",
+"Recibir de Recursos Humanos el costo de los recursos temporales e integrarlo al presupuesto.",
+"Confirmar con infraestructura los sitios de Domi CAN y enviar el archivo antes del 9 de noviembre.",
+"Asignar responsables por actividad en el plan de trabajo y actualizar las fechas con la información de Tecnología."
+],
+fuentes: ["Sesión Mesa Habilitadores, 29 oct 2026"]
+},
 {
 inicio: "2026-10-19",
 fin: "2026-10-23",
@@ -533,23 +580,6 @@ filas: [
 ]
 },
 {
-mesa: "ordenante",
-nombre: "Plan de auditoría regulatoria (propuesto)",
-filas: [
-{ nombre: "Gap assessment: matriz de brechas", inicio: "2026-09-01", fin: "2026-10-31" },
-{ nombre: "Procesos: walkthroughs CAN", inicio: "2026-10-01", fin: "2026-11-30" },
-{ nombre: "Datos y sistemas: data lineage y pruebas de TI", inicio: "2026-11-01", fin: "2026-12-31" },
-{ nombre: "Pruebas 1: cuentas ordenantes y capacidad de pago", inicio: "2027-01-01", fin: "2027-01-31" },
-{ nombre: "Pruebas 2: mandatos y domiciliación", inicio: "2027-02-01", fin: "2027-02-28" },
-{ nombre: "Pruebas 3: prelación y comunicaciones", inicio: "2027-03-01", fin: "2027-03-31" },
-{ nombre: "Pruebas 4: cancelaciones y reclamaciones", inicio: "2027-04-01", fin: "2027-04-30" },
-{ nombre: "Remediación: cierre de hallazgos", inicio: "2027-05-01", fin: "2027-05-31" },
-{ nombre: "Pre-dictamen: informe preliminar", inicio: "2027-06-01", fin: "2027-06-15" },
-{ nombre: "Gobierno: Comité de Auditoría y DG", inicio: "2027-06-16", fin: "2027-06-28" },
-{ nombre: "Entrega a Banco de México", inicio: "2027-06-29", clave: true }
-]
-},
-{
 mesa: "habilitadores",
 nombre: "Habilitadores",
 filas: [
@@ -559,6 +589,76 @@ filas: [
 { nombre: "Preparación operativa", inicio: "2027-05-03", fin: "2027-06-18" }
 ]
 }
+]
+},
+
+/* Matriz de implementación: plan de trabajo de las mesas CAN.
+Aprobada como primera línea base el 29 de octubre de 2026.
+tipo de celda: "fecha" | "tbd" | "duracion" | "golive" */
+matrizImplementacion: {
+titulo: "Plan de trabajo Mesas CAN",
+inicio: "2026-10-12",
+goLive: "2027-06-29",
+nota: "Primera línea base aprobada el 29 de octubre de 2026. Las fechas de desarrollo, QA y UAT dependen de la información de Tecnología y de la prioridad que se asigne al proyecto.",
+fases: [
+{ n: "01", nombre: "Definiciones", area: "Soluciones de negocio y negocio", dependencia: "Ninguna" },
+{ n: "02", nombre: "Revisión de auditoría documental: lineamientos con CAN", area: "Auditoría", dependencia: "Definiciones" },
+{ n: "03", nombre: "Desarrollo", area: "TI", dependencia: "Definiciones" },
+{ n: "04", nombre: "Pruebas QA", area: "TI", dependencia: "Desarrollo" },
+{ n: "05", nombre: "Revisión de auditoría de pruebas QA", area: "Auditoría", dependencia: "Pruebas QA" },
+{ n: "06", nombre: "Pruebas UAT", area: "TI, negocio y soluciones de negocio", dependencia: "Pruebas QA" },
+{ n: "07", nombre: "Generación de manuales", area: "Operaciones", dependencia: "Pruebas UAT" },
+{ n: "08", nombre: "Revisión de auditoría: versión final", area: "Auditoría", dependencia: "Pruebas UAT" },
+{ n: "09", nombre: "Go live", area: "TI", dependencia: "Pruebas UAT" }
+],
+/* Las tres mesas siguen la misma secuencia de fases */
+celdas: [
+{ texto: "12 oct – 31 dic 2026", tipo: "fecha" },
+{ texto: "4 – 18 ene 2027", tipo: "fecha" },
+{ texto: "Por definir por TI", tipo: "tbd" },
+{ texto: "Por definir por TI", tipo: "tbd" },
+{ texto: "Tres semanas", tipo: "duracion" },
+{ texto: "Por definir por TI", tipo: "tbd" },
+{ texto: "Tres semanas", tipo: "duracion" },
+{ texto: "Dos semanas", tipo: "duracion" },
+{ texto: "29 jun 2027", tipo: "golive" }
+],
+mesas: [
+{
+mesa: "otorgante",
+nombre: "Mesa Otorgante",
+componentes: ["Prospección", "Flujo de originación", "Dispersión", "Prelación", "Cobro Domi CAN", "Conciliación", "Mantenimientos CAN"],
+propias: [
+{ nombre: "Modelo de negocio", responsable: "Negocios y canales", dependencia: "Sin dependencias", fechas: "3 nov – 31 dic 2026" },
+{ nombre: "Cálculo de capacidad de pago y políticas de otorgamiento", responsable: "Riesgos", dependencia: "Sin dependencias", fechas: "3 nov – 31 dic 2026" },
+{ nombre: "Modelo y gestión de riesgos", responsable: "Riesgos", dependencia: "Sin dependencias", fechas: "3 nov – 31 dic 2026" },
+{ nombre: "Modelo de rentabilidad: ingresos, gastos, costo de fondeo, originación, servicing y margen", responsable: "Administración y finanzas", dependencia: "Modelo de negocio", fechas: "4 – 22 ene 2027" }
+]
+},
+{
+mesa: "ordenante",
+nombre: "Mesa Ordenante",
+componentes: ["Atención de solicitudes", "Recepción y registro de prelación de cobro", "Recepción y procesamiento de instrucciones de cobro", "Mantenimientos CAN", "Conciliación"],
+propias: [
+{ nombre: "Dictamen aprobatorio de Auditoría Interna", responsable: "Auditoría", dependencia: "Revisión de auditoría: versión final", fechas: "Antes del 29 jun 2027" }
+]
+},
+{
+mesa: "habilitadores",
+nombre: "Habilitadores",
+componentes: ["Administración de portafolio: reservas, reportes regulatorios, SIC y calificación de la cartera", "Parametrización contable", "Servicios de atención al cliente", "Gestión de cartera"],
+propias: [
+{ nombre: "Contratos marco firmados", responsable: "Legal", dependencia: "Recibir los contratos de CECOBAN", fechas: "28 ene 2027" },
+{ nombre: "Conexión de la banca a UAT y producción", responsable: "TI", dependencia: "Sin dependencias", fechas: "1 feb – 1 mar 2027" },
+{ nombre: "Adaptación del core bancario", responsable: "TI", dependencia: "Sin dependencias", fechas: "Por definir" }
+]
+}
+],
+leyenda: [
+{ tipo: "fecha", texto: "Fecha definida (inicio y fin)" },
+{ tipo: "tbd", texto: "Por definir por TI" },
+{ tipo: "duracion", texto: "Duración estimada" },
+{ tipo: "golive", texto: "Go live" }
 ]
 },
 
