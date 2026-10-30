@@ -137,8 +137,7 @@ decisiones: [],
 /* Alertas y riesgos. nivel: "alto" | "medio" */
 /* Vacío muestra en el tablero "No identificados por el momento" */
 alertas: [
-{ nivel: "alto", titulo: "Ventana de pruebas cerrada sin poder consumir las APIs de CECOBAN", detalle: "El problema de comunicación se resolvió, pero no es posible consumir las APIs. Las últimas evidencias se enviaron un sábado, con el periodo ya cerrado, después de que CECOBAN tardara cerca de semana y media en responder correos enviados 15 días antes. Se solicitará a CECOBAN que reabra el sistema por un tiempo para concluir las pruebas y se buscarán horarios para revisar los errores en línea entre ambos equipos técnicos.", fuente: "Habilitadores, 29 oct 2026" },
-{ nivel: "medio", titulo: "El apoyo externo depende de la aprobación del presupuesto", detalle: "Se decidió no contratar a la consultora. Primero debe aprobarse el presupuesto del proyecto, lo que se espera en un par de semanas, y se está a la espera del costo aproximado de los recursos temporales que entregue Recursos Humanos. Una vez aprobado, cada área buscará a sus recursos; se agregará un documentador a la solicitud de Operación.", fuente: "Habilitadores, 29 oct 2026" }
+{ nivel: "alto", titulo: "Ventana de pruebas cerrada sin poder consumir las APIs de CECOBAN", detalle: "El problema de comunicación se resolvió, pero no es posible consumir las APIs. Las últimas evidencias se enviaron un sábado, con el periodo ya cerrado, después de que CECOBAN tardara cerca de semana y media en responder correos enviados 15 días antes. Se solicitará a CECOBAN que reabra el sistema por un tiempo para concluir las pruebas y se buscarán horarios para revisar los errores en línea entre ambos equipos técnicos.", fuente: "Habilitadores, 29 oct 2026" }
 ],
 
 
@@ -780,3 +779,4 @@ nivelesRiesgo: [
 },
 
 };
+
